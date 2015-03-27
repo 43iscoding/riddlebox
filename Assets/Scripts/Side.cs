@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Side : MonoBehaviour {
+public class Side : MonoBehaviour
+{
+	Box box;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public void SetBox(Box box1)
+	{
+		box = box1;
 	}
 }
