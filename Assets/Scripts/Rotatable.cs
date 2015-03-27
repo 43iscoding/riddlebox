@@ -36,8 +36,7 @@ public class Rotatable : MonoBehaviour {
 
 		if (dragging) {
 			Vector3 delta = currentMousePosition - prevMousePosition;
-			Debug.Log (delta);
-			transform.Rotate(delta);
+			transform.Rotate(delta * rotationSpeed);
 		}
 
 
