@@ -9,4 +9,10 @@ public class Side : MonoBehaviour
 	{
 		box = box1;
 	}
+
+	public void OnUnlock()
+	{
+		box.OnSideUnlocked(this);
+		gameObject.SetActive(false);
+	}
 }
