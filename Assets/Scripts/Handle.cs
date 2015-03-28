@@ -4,14 +4,10 @@ using System.Collections;
 public class Handle : MonoBehaviour
 {
 	public float needAngle;
-	public float treshhold;
+	public float treshold;
 
 	public bool IsOk()
 	{
-		return transform.
-	}
-
-	public void Update()
-	{
+		return Mathf.Abs(transform.localRotation.z - needAngle) < treshold;
 	}
 }
