@@ -445,11 +445,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   melodyString: asdfg
   audioClips:
-  - {fileID: 8300000, guid: 91e0ba164bd28437cbdfb938a1b2f3e6, type: 3}
-  - {fileID: 8300000, guid: d0c5a9aec598146a89a562d8f9f44438, type: 3}
-  - {fileID: 8300000, guid: 98ea03be142624336884c7063e3f377a, type: 3}
-  - {fileID: 8300000, guid: 32040f90518bf40589f70fb0fc93f644, type: 3}
-  - {fileID: 8300000, guid: 6fc58d667fcd34b33917beb51890c5f5, type: 3}
+  - {fileID: 8300000, guid: ae6937cd6e01f44fd865a192e7eba055, type: 3}
+  - {fileID: 8300000, guid: f5263e4d2966e4234923316e2d01c321, type: 3}
+  - {fileID: 8300000, guid: 0183fe1b45a4b4c92a6a1deb352c89a4, type: 3}
+  - {fileID: 8300000, guid: 78e6467834d41417abfef7b791a610da, type: 3}
+  - {fileID: 8300000, guid: 3bbfe7ea0db4f43c2b6da7614f9680bc, type: 3}
 --- !u!4 &1834185510
 Transform:
   m_ObjectHideFlags: 0

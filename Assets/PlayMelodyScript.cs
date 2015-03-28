@@ -12,8 +12,6 @@ public class PlayMelodyScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		audioPlayer = transform.GetComponent<AudioSource>();
-		
-		StartCoroutine(this.Play());
 	}
 	
 	IEnumerator Play ()
