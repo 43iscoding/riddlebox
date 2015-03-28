@@ -1,13 +1,23 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using System.Collections;
 
 public class Handle : MonoBehaviour
 {
-	public float needAngle;
+	public List<float> needAngle;
 	public float treshold;
 
 	public bool IsOk()
 	{
-		return Mathf.Abs(transform.localRotation.z - needAngle) < treshold;
+		foreach (var f1 in needAngle)
+		{
+			float f = (transform.localRotation.z * Mathf.Rad2Deg - f1);
+			Debug.Log(f);
+			if (Mathf.Abs(f) < treshold)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 }

@@ -10,16 +10,18 @@ public class Rotatable : MonoBehaviour
 
 	private bool dragging;
 
-	void Start() {
+	void Start() 
+	{
 		prevMousePosition = currentMousePosition = Input.mousePosition;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		prevMousePosition = currentMousePosition;
 		currentMousePosition = Input.mousePosition;
 
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (0))
+		{
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			RaycastHit hitInfo;
 			Physics.Raycast (ray, out hitInfo);
@@ -30,7 +32,8 @@ public class Rotatable : MonoBehaviour
 			}
 		}
 
-		if (!Input.GetMouseButton (0)) {
+		if (!Input.GetMouseButton (0)) 
+		{
 			dragging = false;
 		}
 
@@ -39,8 +42,5 @@ public class Rotatable : MonoBehaviour
 			Vector3 rotation = new Vector3(delta.y, -delta.x);
 			transform.Rotate(rotation * rotationSpeed, Space.World);
 		}
-
-
-
 	}
 }
