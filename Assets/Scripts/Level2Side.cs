@@ -13,6 +13,7 @@ public class Level2Side : Side
 	public List<Handle> doors;
 	public PlayMelodyScript melody;
 	public List<Handle> topHandles;
+	public Material green;
 
 	public List<GameObject> ruchka;
 	bool ruckaReady;
@@ -33,6 +34,11 @@ public class Level2Side : Side
 		}
 		//// DOORS
 		Debug.Log("Open doors");
+
+		//{
+		//	var joint = doors[0].gameObject.AddComponent<HingeJoint>();
+		//	joint.connectedBody
+		//}
 
 		foreach (var door in doors)
 		{
@@ -66,10 +72,10 @@ public class Level2Side : Side
 				bool isOk = h.IsOk();
 				allOk = isOk && allOk;
 
-				if (isOk)
-				{
-					h.LockRotation();
-				}
+				//if (isOk)
+				//{
+				//	h.LockRotation();
+				//}
 			}
 
 			if (allOk)
@@ -78,7 +84,15 @@ public class Level2Side : Side
 			}
 			yield return null;
 		}
+
+		foreach (var h in topHandles)
+		{
+			//h.LockRotation();
+			h.GetComponent<MeshRenderer>().materials[1].SetTexture(0, green.mainTexture);
+		}
 		Debug.Log("Top Handles Unlocked");
+		doors[0].GetComponent<MouseDownProxy>().enabled = false;
+		doors[1].GetComponent<MouseDownProxy>().enabled = false;
 		topHandlesReady = true;
 	}
 
@@ -126,11 +140,12 @@ public class Level2Side : Side
 		// MELODY
 		Debug.Log("Play sound");
 
-
 		while (!melody.complete)
 		{
 			yield return null;
 		}
+
+		Debug.Log("Viezhaet ruchka");
 
 		{
 			// Viezhaet ruchka

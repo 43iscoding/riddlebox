@@ -1236,7 +1236,6 @@ GameObject:
   - 4: {fileID: 393492792}
   - 33: {fileID: 393492794}
   - 23: {fileID: 393492793}
-  - 64: {fileID: 393492795}
   m_Layer: 8
   m_Name: Start_box_Bottom_MeshPart1
   m_TagString: Untagged
@@ -1289,18 +1288,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 393492791}
   m_Mesh: {fileID: 4300006, guid: 582580eb0e051544b8ff58f0276bf2d7, type: 3}
---- !u!64 &393492795
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 393492791}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300006, guid: 582580eb0e051544b8ff58f0276bf2d7, type: 3}
 --- !u!1 &482304689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1301,7 @@ GameObject:
   - 54: {fileID: 482304694}
   - 59: {fileID: 482304693}
   - 114: {fileID: 482304695}
+  - 114: {fileID: 482304696}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Widget
@@ -1434,6 +1422,17 @@ MonoBehaviour:
   - 330
   treshold: 30
   axis: 0
+--- !u!114 &482304696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 482304689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70a342351df38046831cc100dd34dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &551709523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,6 +2558,42 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11449800, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437536, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11476824, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445734, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422544, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488518, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10806466, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Intensity
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 10806466, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_BounceIntensity
+      value: 1.09000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 10806466, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
   m_IsPrefabParent: 0
@@ -2774,6 +2809,7 @@ GameObject:
   - 54: {fileID: 1231789902}
   - 59: {fileID: 1231789901}
   - 114: {fileID: 1231789903}
+  - 114: {fileID: 1231789904}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Widget
@@ -2894,6 +2930,17 @@ MonoBehaviour:
   - -330
   treshold: 30
   axis: 0
+--- !u!114 &1231789904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231789897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70a342351df38046831cc100dd34dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1247826441
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,6 +2954,7 @@ GameObject:
   - 114: {fileID: 1247826446}
   - 64: {fileID: 1247826445}
   - 114: {fileID: 1247826447}
+  - 65: {fileID: 1247826448}
   m_Layer: 0
   m_Name: Round_Handle_002
   m_TagString: Widget
@@ -2968,7 +3016,7 @@ MeshCollider:
   m_GameObject: {fileID: 1247826441}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300018, guid: 582580eb0e051544b8ff58f0276bf2d7, type: 3}
@@ -2999,6 +3047,18 @@ MonoBehaviour:
   - 344
   treshold: 10
   axis: 2
+--- !u!65 &1247826448
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1247826441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .000226737087, y: .000224252508, z: .000128654545}
+  m_Center: {x: 2.91038305e-11, y: -5.45696821e-11, z: -6.43272142e-05}
 --- !u!1 &1310063130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,6 +3376,7 @@ MonoBehaviour:
   - {fileID: 1247826447}
   - {fileID: 1884976526}
   - {fileID: 1310063136}
+  green: {fileID: 2100000, guid: b69684dd20241e545b9c9c643f645e0e, type: 2}
   ruchka:
   - {fileID: 1369987020}
   - {fileID: 1101752160}

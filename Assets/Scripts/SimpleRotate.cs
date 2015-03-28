@@ -3,7 +3,6 @@
 public class SimpleRotate : MonoBehaviour
 {
 	public Axis axis;
-	const float rotationSpeed = 0.3f;
 
 	Vector3 prevMousePosition;
 	Vector3 currentMousePosition;

@@ -18,7 +18,6 @@ public class RotateCube : MonoBehaviour
 	void OnMouseDrag()
 	{
 		prevMousePosition = currentMousePosition;
-		Debug.Log("OnMouseDrag");
 		currentMousePosition = Input.mousePosition;
 		Vector3 delta = currentMousePosition - prevMousePosition;
 		Vector3 rotation = new Vector3(delta.y, -delta.x);
