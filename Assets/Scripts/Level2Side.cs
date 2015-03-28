@@ -9,6 +9,9 @@ public class Level2Side : Side
 	public Handle bottom;
 	public GameObject lockUp;
 	public GameObject lockDown;
+	public Rigidbody topBox;
+
+	public List<Handle> doors;
 
 	void Start()
 	{
@@ -19,6 +22,7 @@ public class Level2Side : Side
 
 	IEnumerator CheckBottom()
 	{
+		// 4 HANDLES
 		for (;;)
 		{
 			bool allOk = true;
@@ -44,7 +48,9 @@ public class Level2Side : Side
 		{
 			h.LockRotation();
 		}
-		Debug.Log("Unlocked");
+		Debug.Log("Rotate bottom");
+
+		// Rotate bottom
 		bottom.GetComponent<RotateWidget>().enabled = true;
 
 		while (!bottom.IsOk())
@@ -53,5 +59,23 @@ public class Level2Side : Side
 		}
 		Destroy(lockUp);
 		Destroy(lockDown);
+
+
+
+
+		// DOORS
+		Debug.Log("Open doors");
+
+		foreach (var door in doors)
+		{
+			door.gameObject.AddComponent<MeshCollider>().convex = true;
+			door.gameObject.AddComponent<RotateWidget>();
+		}
+
+		while (!doors[0].IsOk() || !doors[1].IsOk())
+		{
+			yield return null;
+		}
+		Debug.Log("Level completed");
 	}
 }
