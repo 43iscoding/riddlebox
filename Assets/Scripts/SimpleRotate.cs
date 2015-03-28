@@ -2,6 +2,7 @@
 
 public class SimpleRotate : MonoBehaviour
 {
+	public Axis axis;
 	const float rotationSpeed = 0.3f;
 
 	Vector3 prevMousePosition;
@@ -14,7 +15,6 @@ public class SimpleRotate : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		Debug.Log("OnMouseDown");
 		prevMousePosition = currentMousePosition;
 	}
 
@@ -24,8 +24,9 @@ public class SimpleRotate : MonoBehaviour
 		currentMousePosition = Input.mousePosition;
 
 		Vector3 delta = currentMousePosition - prevMousePosition;
+		float v = delta.x;
 		Vector3 rotation = new Vector3(delta.y, -delta.x);
-		Debug.Log(rotation);
-		transform.Rotate(rotation * rotationSpeed, Space.Self);
+		//transform.Rotate(rotation * rotationSpeed, Space.Self);
+		transform.localRotation *= Quaternion.Euler(axis == Axis.X ? v : 0, axis == Axis.Y ? v : 0, axis == Axis.Z ? v : 0);
 	}
 }

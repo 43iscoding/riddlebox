@@ -25,20 +25,40 @@ public class Rotatable : MonoBehaviour
 			prevMousePosition = currentMousePosition;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hitInfo;
-			Physics.Raycast (ray, out hitInfo);
-			if (hitInfo.collider == null || hitInfo.collider.tag != "Widget")
+			if (Physics.Raycast(ray, out hitInfo))
+			{
+				if (hitInfo.collider == null || hitInfo.collider.tag != "Widget")
+				{
+					dragging = true;
+				}
+				else
+				{
+					dragging = false;
+					//selected = hitInfo.collider.gameObject;
+					//selected.SendMessage("OnMouseDown");
+				}
+			}
+			else
 			{
 				dragging = true;
-			} 
-			else 
-			{
-				dragging = false;
 			}
 		}
 
 		if (!Input.GetMouseButton(0)) 
 		{
+			//if (selected != null)
+			//{
+			//	//selected.SendMessage("OnMouseUp");
+			//	selected = null;
+			//}
 			dragging = false;
+		}
+		else
+		{
+			//if (selected != null)
+			//{
+			//	selected.SendMessage("OnMouseDrag");
+			//}
 		}
 
 		if (dragging) 

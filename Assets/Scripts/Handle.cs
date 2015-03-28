@@ -31,7 +31,7 @@ public class Handle : MonoBehaviour
 					localAngle = transform.localEulerAngles.z;
 					break;
 			}
-			
+//			Debug.Log(name + " " + localAngle);
 			float f = Mathf.Abs(localAngle - needAngl);
 			if (f > 360)
 			{

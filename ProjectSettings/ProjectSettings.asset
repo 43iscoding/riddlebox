@@ -18,8 +18,8 @@ PlayerSettings:
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
-  defaultScreenWidthWeb: 1200
-  defaultScreenHeightWeb: 800
+  defaultScreenWidthWeb: 1100
+  defaultScreenHeightWeb: 650
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   m_ActiveColorSpace: 0
