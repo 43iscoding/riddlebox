@@ -12,6 +12,7 @@ public class Level2Side : Side
 	public Rigidbody topBox;
 
 	public List<Handle> doors;
+	public PlayMelodyScript melody;
 
 	void Start()
 	{
@@ -59,8 +60,16 @@ public class Level2Side : Side
 		}
 		Destroy(lockUp);
 		Destroy(lockDown);
+		
+		// MELODY
+		Debug.Log("Play sound");
 
 
+
+		while (!melody.complete)
+		{
+			yield return null;
+		}
 
 
 		// DOORS

@@ -2,9 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-
-public class playTone : MonoBehaviour {
-
+public class playTone : MonoBehaviour 
+{
 	public string tone;
 	public List<AudioClip> audioClips;
 	
@@ -13,13 +12,14 @@ public class playTone : MonoBehaviour {
 	
 	AudioSource audioPlayer;
 
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		audioPlayer = transform.GetComponent<AudioSource>();
 		melodyButtonScript = melodyButton.GetComponent<PlayMelodyScript>();
 	}
 	
-	void OnMouseDown() {
+	void OnMouseDown() 
+	{
 		if (tone == "a") { audioPlayer.clip = audioClips[0]; }
 		if (tone == "s") { audioPlayer.clip = audioClips[1]; }
 		if (tone == "d") { audioPlayer.clip = audioClips[2]; }
@@ -42,6 +42,4 @@ public class playTone : MonoBehaviour {
 			}
 		}
 	}
-	
-	
 }
