@@ -129,8 +129,6 @@ public static class Utils
 		return iPhone.generation.ToString();
 #elif UNITY_ANDROID || UNITY_WP8 || UNITY_BLACKBERRY
 		return SystemInfo.deviceModel;
-#elif UNITY_WEBPLAYER
-		return GetWebArgument("platform") ?? Application.absoluteURL;
 #else
 		return SystemInfo.deviceName;
 #endif
