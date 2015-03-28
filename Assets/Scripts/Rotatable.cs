@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Rotatable : MonoBehaviour 
-{
-	float rotationSpeed = 0.3f;
+public class Rotatable : MonoBehaviour {
+	
+	public float rotationSpeed;
 
 	private Vector3 prevMousePosition;
 	private Vector3 currentMousePosition;
