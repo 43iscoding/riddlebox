@@ -20,6 +20,26 @@ ModelImporter:
     100024: Start_box_Top
     100026: Start_box_Top_MeshPart0
     100028: Start_box_Top_MeshPart1
+    100030: Cylinder001
+    100032: Cylinder_Handle_002
+    100034: Cylinder_Handle_01
+    100036: Door_Decor_01
+    100038: Door_Decor_02
+    100040: Door_Decor_03
+    100042: Door_Decor_04
+    100044: Door_Metal_01
+    100046: Door_Metal_02
+    100048: Music_Button_01
+    100050: Music_Button_02
+    100052: Music_Button_03
+    100054: Music_Button_04
+    100056: Music_Button_05
+    100058: MusicCenter_Button
+    100060: Object001
+    100062: Object006
+    100064: Object007
+    100066: Round_Handle_005
+    100068: Round_Handle_006
     400000: //RootNode
     400002: Handle_002
     400004: Handle_003
@@ -35,6 +55,26 @@ ModelImporter:
     400024: Start_box_Top
     400026: Start_box_Top_MeshPart0
     400028: Start_box_Top_MeshPart1
+    400030: Cylinder001
+    400032: Cylinder_Handle_002
+    400034: Cylinder_Handle_01
+    400036: Door_Decor_01
+    400038: Door_Decor_02
+    400040: Door_Decor_03
+    400042: Door_Decor_04
+    400044: Door_Metal_01
+    400046: Door_Metal_02
+    400048: Music_Button_01
+    400050: Music_Button_02
+    400052: Music_Button_03
+    400054: Music_Button_04
+    400056: Music_Button_05
+    400058: MusicCenter_Button
+    400060: Object001
+    400062: Object006
+    400064: Object007
+    400066: Round_Handle_005
+    400068: Round_Handle_006
     2300000: Handle_002
     2300002: Handle_003
     2300004: Handle_004
@@ -47,6 +87,26 @@ ModelImporter:
     2300018: Start_box_Bottom_MeshPart1
     2300020: Start_box_Top_MeshPart0
     2300022: Start_box_Top_MeshPart1
+    2300024: Cylinder001
+    2300026: Cylinder_Handle_002
+    2300028: Cylinder_Handle_01
+    2300030: Door_Decor_01
+    2300032: Door_Decor_02
+    2300034: Door_Decor_03
+    2300036: Door_Decor_04
+    2300038: Door_Metal_01
+    2300040: Door_Metal_02
+    2300042: Music_Button_02
+    2300044: Music_Button_03
+    2300046: Music_Button_04
+    2300048: Music_Button_05
+    2300050: MusicCenter_Button
+    2300052: Object001
+    2300054: Object006
+    2300056: Object007
+    2300058: Round_Handle_005
+    2300060: Round_Handle_006
+    2300062: Start_box_Top
     3300000: Handle_002
     3300002: Handle_003
     3300004: Handle_004
@@ -59,6 +119,26 @@ ModelImporter:
     3300018: Start_box_Bottom_MeshPart1
     3300020: Start_box_Top_MeshPart0
     3300022: Start_box_Top_MeshPart1
+    3300024: Cylinder001
+    3300026: Cylinder_Handle_002
+    3300028: Cylinder_Handle_01
+    3300030: Door_Decor_01
+    3300032: Door_Decor_02
+    3300034: Door_Decor_03
+    3300036: Door_Decor_04
+    3300038: Door_Metal_01
+    3300040: Door_Metal_02
+    3300042: Music_Button_02
+    3300044: Music_Button_03
+    3300046: Music_Button_04
+    3300048: Music_Button_05
+    3300050: MusicCenter_Button
+    3300052: Object001
+    3300054: Object006
+    3300056: Object007
+    3300058: Round_Handle_005
+    3300060: Round_Handle_006
+    3300062: Start_box_Top
     4300000: Start_box_Top_MeshPart0
     4300002: Start_box_Top_MeshPart1
     4300004: Start_box_Bottom_MeshPart0
@@ -71,6 +151,26 @@ ModelImporter:
     4300018: Round_Handle_002
     4300020: Round_Handle_003
     4300022: Round_Handle_004
+    4300024: Start_box_Top
+    4300026: Object001
+    4300028: Cylinder_Handle_002
+    4300030: Door_Decor_02
+    4300032: Door_Decor_03
+    4300034: Door_Metal_01
+    4300036: Object006
+    4300038: Round_Handle_005
+    4300040: Round_Handle_006
+    4300042: Cylinder_Handle_01
+    4300044: Door_Decor_04
+    4300046: Door_Decor_01
+    4300048: Cylinder001
+    4300050: Door_Metal_02
+    4300052: Music_Button_03
+    4300054: Music_Button_02
+    4300056: Music_Button_04
+    4300058: Music_Button_05
+    4300060: Object007
+    4300062: MusicCenter_Button
     9500000: //RootNode
   materials:
     importMaterials: 1
