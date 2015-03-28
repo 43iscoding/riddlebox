@@ -26,3 +26,5 @@ UnityVS*
 /Levels
 /fakeModule.iml
 /Video
+*.suo
+ProjectSettings/ProjectSettings.asset
