@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Level2Side : Side
 {
 	public List<Handle> handles;
-	public GameObject bottom;
+	public Handle bottom;
+	public GameObject lockUp;
+	public GameObject lockDown;
 
 	void Start()
 	{
@@ -26,8 +29,7 @@ public class Level2Side : Side
 
 				if (isOk)
 				{
-					h.GetComponent<RotateWidget>().enabled = false;
-					h.GetComponent<Rigidbody>().isKinematic = true;
+					h.LockRotation();
 				}
 			}
 
@@ -40,10 +42,16 @@ public class Level2Side : Side
 
 		foreach (var h in handles)
 		{
-			h.GetComponent<RotateWidget>().enabled = false;
-			h.GetComponent<Rigidbody>().isKinematic = true;
+			h.LockRotation();
 		}
 		Debug.Log("Unlocked");
 		bottom.GetComponent<RotateWidget>().enabled = true;
+
+		while (!bottom.IsOk())
+		{
+			yield return null;
+		}
+		Destroy(lockUp);
+		Destroy(lockDown);
 	}
 }

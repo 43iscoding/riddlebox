@@ -1,18 +1,38 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using System.Collections;
+
+public enum Axis
+{
+	X,Y,Z
+}
 
 public class Handle : MonoBehaviour
 {
 	public List<float> needAngle;
 	public float treshold;
+	public Axis axis = Axis.Z;
 
 	public bool IsOk()
 	{
-		foreach (var f1 in needAngle)
+		foreach (var needAngl in needAngle)
 		{
-			float f2 = transform.localEulerAngles.z;
-			float f = Mathf.Abs(f2 - f1);
+			float localAngle = 0;
+			switch (axis)
+			{
+				case Axis.X:
+					localAngle = transform.localEulerAngles.x;
+					break;
+				case Axis.Y:
+					localAngle = transform.localEulerAngles.y;
+					break;
+				case Axis.Z:
+					localAngle = transform.localEulerAngles.z;
+					break;
+			}
+			
+			float f = Mathf.Abs(localAngle - needAngl);
 			if (f > 360)
 			{
 				f -= 360;
@@ -23,5 +43,11 @@ public class Handle : MonoBehaviour
 			}
 		}
 		return false;
+	}
+
+	public void LockRotation()
+	{
+		GetComponent<RotateWidget>().enabled = false;
+		GetComponent<Rigidbody>().isKinematic = true;
 	}
 }

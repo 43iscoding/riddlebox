@@ -34,16 +34,11 @@ public class Rotatable : MonoBehaviour
 			{
 				dragging = false;
 			}
-			Debug.Log("GetMouseButtonDown");
 		}
 
 		if (!Input.GetMouseButton(0)) 
 		{
 			dragging = false;
-		}
-		else
-		{
-			Debug.Log("GetMouseButton");
 		}
 
 		if (dragging) 
@@ -51,8 +46,6 @@ public class Rotatable : MonoBehaviour
 			Vector3 delta = currentMousePosition - prevMousePosition;
 			Vector3 rotation = new Vector3(delta.y, -delta.x);
 			transform.Rotate(rotation * rotationSpeed, Space.World);
-
-		//	transform.Rotate(Input.GetAxis("Mouse Y")  *rotationSpeed, -Input.GetAxis("Mouse X")*rotationSpeed, Time.deltaTime, Space.World);
 		}
 	}
 }
