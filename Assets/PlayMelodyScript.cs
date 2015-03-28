@@ -4,7 +4,9 @@ using System.Collections.Generic;
 
 public class PlayMelodyScript : MonoBehaviour {
 
-	public string melodyString;
+	public string melodyString = "";
+	public string melodyPlayed = "";
+	public bool complete;
 	public List<AudioClip> audioClips;
 	
 	AudioSource audioPlayer;
@@ -12,9 +14,17 @@ public class PlayMelodyScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		audioPlayer = transform.GetComponent<AudioSource>();
+		complete = false;
+
 	}
 	
-	IEnumerator Play ()
+	public void Play()
+	{
+		StartCoroutine(PlayCouroutine ());	
+	}
+
+	
+	IEnumerator PlayCouroutine ()
 	{
 		if (melodyString != string.Empty)
 		{
