@@ -7,35 +7,32 @@ using UnityEngine;
 class SideWithFourRotatingHandles : Side
 {
     public List<GameObject> handles;
-    //public List<GameObject> lightBulbs;
+    public List<GameObject> lightBulbs;
 
     public void Start()
     {
 
     }
 
-    public void UnUpdate()
+    public void Update()
     {
         var areAllOk = true;
         foreach (var h in handles)
         {
             if (!h.GetComponent<Handle>().IsOk())
             {
-                // TESTING
-                h.GetComponent<Renderer>().material.color = Color.green;
-
                 areAllOk = false;
             }
         }
-        if (areAllOk)
+
+        //if (areAllOk)
+        if (areAllOk || !areAllOk) // TESTING LINE
         {
-            //foreach(var l in lightBulbs)
-            //{
-                    
-            //}
-            foreach(var l in handles) // here will be lightbulbs
+            var greenLight = (Texture2D) Resources.LoadAssetAtPath("Assets/Scenes/Level2/Textures/Green_Light.jpg", typeof(Texture2D));
+            foreach(var l in lightBulbs) // here will be lightbulbs
             {
-                l.GetComponent<Renderer>().material.color = Color.green;
+                //l.GetComponent<Renderer>().material.color = Color.green;
+                l.GetComponent<Renderer>().materials[1].SetTexture(1, greenLight);
             }
         }
     }
