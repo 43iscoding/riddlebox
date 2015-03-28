@@ -13,10 +13,10 @@ public class PlayMelodyScript : MonoBehaviour {
 	void Start () {
 		audioPlayer = transform.GetComponent<AudioSource>();
 		
-		this.Play();
+		StartCoroutine(this.Play());
 	}
 	
-	void Play ()
+	IEnumerator Play ()
 	{
 		if (melodyString != string.Empty)
 		{
@@ -34,9 +34,10 @@ public class PlayMelodyScript : MonoBehaviour {
 				
 				while (audioPlayer.isPlaying)
 				{
-
+					yield return null;
 				}
 			}
 		}
 	}
+	
 }
