@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class playMelody : MonoBehaviour {
+public class playMelody : MonoBehaviour
+{
 
 	PlayMelodyScript melodyScript;
 
@@ -11,8 +12,6 @@ public class playMelody : MonoBehaviour {
 	}
 	
 	void OnMouseDown() {
-		print ("play melody");
-	
 		melodyScript.Play();	
 	}
 }

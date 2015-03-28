@@ -24,7 +24,7 @@ public class Level2Side : Side
 	IEnumerator CheckBottom()
 	{
 		// 4 HANDLES
-		for (;;)
+		for (; ; )
 		{
 			bool allOk = true;
 			foreach (var h in handles)
@@ -60,7 +60,7 @@ public class Level2Side : Side
 		}
 		Destroy(lockUp);
 		Destroy(lockDown);
-		
+
 		// MELODY
 		Debug.Log("Play sound");
 
@@ -72,7 +72,7 @@ public class Level2Side : Side
 		}
 
 
-		// DOORS
+		//// DOORS
 		Debug.Log("Open doors");
 
 		foreach (var door in doors)
@@ -83,6 +83,14 @@ public class Level2Side : Side
 
 		while (!doors[0].IsOk() || !doors[1].IsOk())
 		{
+			if (doors[0].IsOk())
+			{
+				doors[0].LockRotation();
+			}
+			if (doors[1].IsOk())
+			{
+				doors[1].LockRotation();
+			}
 			yield return null;
 		}
 		Debug.Log("Level completed");
