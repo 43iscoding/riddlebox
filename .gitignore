@@ -28,3 +28,5 @@ UnityVS*
 /Video
 *.suo
 ProjectSettings/ProjectSettings.asset
+*.asset
+*.asset
