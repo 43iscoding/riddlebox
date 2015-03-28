@@ -11,8 +11,12 @@ public class Handle : MonoBehaviour
 	{
 		foreach (var f1 in needAngle)
 		{
-			float f = (transform.localRotation.z * Mathf.Rad2Deg - f1);
-			Debug.Log(f);
+			float f2 = transform.localEulerAngles.z;
+			float f = Mathf.Abs(f2 - f1);
+			if (f > 360)
+			{
+				f -= 360;
+			}
 			if (Mathf.Abs(f) < treshold)
 			{
 				return true;

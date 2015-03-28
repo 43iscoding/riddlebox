@@ -504,9 +504,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needAngle:
-  - -45
-  - 45
-  treshold: 5
+  - 270
+  - 90
+  treshold: 10
 --- !u!1 &193508289
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,9 +718,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needAngle:
-  - -45
-  - 45
-  treshold: 5
+  - 270
+  - 90
+  treshold: 10
 --- !u!1 &271748463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,9 +1099,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needAngle:
-  - -45
-  - 45
-  treshold: 5
+  - 270
+  - 90
+  treshold: 10
 --- !u!1 &391533757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,9 +1801,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needAngle:
-  - 45
-  - -45
-  treshold: 5
+  - 90
+  - 270
+  treshold: 10
 --- !u!1 &662990113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,7 +2548,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1471427895}
-  m_LocalRotation: {x: -.49999997, y: .50000006, z: -.50000006, w: .49999997}
+  m_LocalRotation: {x: .499999911, y: -.500000179, z: .499999821, w: -.50000006}
   m_LocalPosition: {x: -.555100024, y: -.103, z: -.219999999}
   m_LocalScale: {x: -1000, y: -1000, z: -1000}
   m_Children:
@@ -2663,8 +2663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handles:
   - {fileID: 378635406}
-  - {fileID: 224082358}
   - {fileID: 149987223}
+  - {fileID: 224082358}
   - {fileID: 626041908}
   bottom: {fileID: 91582359}
 --- !u!95 &1624086723

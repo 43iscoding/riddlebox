@@ -21,12 +21,13 @@ public class Level2Side : Side
 			bool allOk = true;
 			foreach (var h in handles)
 			{
-				if (h.IsOk())
+				bool isOk = h.IsOk();
+				allOk = isOk && allOk;
+
+				if (isOk)
 				{
-				}
-				else
-				{
-					allOk = false;
+					h.GetComponent<RotateWidget>().enabled = false;
+					h.GetComponent<Rigidbody>().isKinematic = true;
 				}
 			}
 
