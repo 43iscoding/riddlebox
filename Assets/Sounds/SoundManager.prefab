@@ -40,6 +40,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otletaetKrizhka: {fileID: 8300000, guid: 26294060674cf754abcf62dc5b66fc80, type: 3}
+  cube_base_rotation: {fileID: 8300000, guid: 4b3d0dbe8a5718140a15f81b06a56f2b, type: 3}
+  electro: {fileID: 8300000, guid: 5b7fd6c82f2aca64b9ce3713d2bdce1e, type: 3}
+  krutilki: {fileID: 8300000, guid: 91d66751a7ab79548b71f9e595e4ae2c, type: 3}
+  nazhatie_knopki: {fileID: 8300000, guid: ae6c2ba190aa2e343bd1d17b3f9bffbb, type: 3}
+  open_gates: {fileID: 8300000, guid: 6140cceee36c4ac4182d163808c1163d, type: 3}
+  otkrivanie_dverki: {fileID: 8300000, guid: d3236260cf0b26047a7cc6377478ece2, type: 3}
+  Otzhalisj_knopki: {fileID: 8300000, guid: 5265d395690e41a4b995ce43235dd29c, type: 3}
+  unlocking: {fileID: 8300000, guid: 622d733cc27f2184aac706f0f03ca370, type: 3}
+  unlocking_2: {fileID: 8300000, guid: 68363a91ea657bf4989c2f160c24cb3b, type: 3}
+  Vikruchivaetsa_mehanizm: {fileID: 8300000, guid: d4f36af472d7f264c9d9053eeb716053,
+    type: 3}
+  vkljuchaetsa_lampochka: {fileID: 8300000, guid: 4f695d2ba6e80f7428f367e408e2a29f,
+    type: 3}
+  lampochka_var2: {fileID: 8300000, guid: 8af77b0b2f109e44d9470540d68fa87a, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

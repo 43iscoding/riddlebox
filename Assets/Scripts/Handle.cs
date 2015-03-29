@@ -15,6 +15,7 @@ public class Handle : MonoBehaviour
 	public Axis axis = Axis.Z;
 	public GameObject AllOkGameObject;
 	public GameObject ErrorGameObject;
+	internal bool unlocked = true;
 
 	public void TurnRed()
 	{
@@ -65,7 +66,11 @@ public class Handle : MonoBehaviour
 
 	public void LockRotation()
 	{
-		GetComponent<RotateWidget>().enabled = false;
-		GetComponent<Rigidbody>().isKinematic = true;
+		if (unlocked)
+		{
+			unlocked = false;
+			GetComponent<RotateWidget>().enabled = false;
+			GetComponent<Rigidbody>().isKinematic = true;
+		}
 	}
 }

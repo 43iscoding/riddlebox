@@ -5,6 +5,7 @@ public class RotateWidget : MonoBehaviour
 {
 	GameObject handle;
 	Plane plane;
+	public AudioClip onStart;
 
 	void Start()
 	{
@@ -22,6 +23,11 @@ public class RotateWidget : MonoBehaviour
 			return;
 		}
 		Destroy(handle);
+
+		if (onStart != null)
+		{
+			SoundUtils.PlaySound(onStart);
+		}
 
 		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

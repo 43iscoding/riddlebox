@@ -86,6 +86,7 @@ public class Level1Side : Side
 			yield return null;
 		}
 
+		SoundUtils.PlaySound(SoundManager.instance.lampochka_var2);
 		foreach (var h in topHandles)
 		{
 			h.TurnGreen();
@@ -111,9 +112,10 @@ public class Level1Side : Side
 				bool isOk = h.IsOk();
 				allOk = isOk && allOk;
 
-				if (isOk)
+				if (isOk && h.unlocked)
 				{
 					h.LockRotation();
+					SoundUtils.PlaySound(SoundManager.instance.unlocking);
 				}
 			}
 
@@ -132,6 +134,7 @@ public class Level1Side : Side
 
 		// Rotate bottom
 		bottom.GetComponent<RotateWidget>().enabled = true;
+		bottom.GetComponent<RotateWidget>().onStart = SoundManager.instance.cube_base_rotation;
 
 		while (!bottom.IsOk())
 		{
