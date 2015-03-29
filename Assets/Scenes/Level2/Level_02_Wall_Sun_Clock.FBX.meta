@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 8c5fee750f579c34abb05dce3cb6ac3f
+timeCreated: 1427631028
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Arrow
+    100002: Clock_Energy
+    100004: Clock_Lamp_002
+    100006: Clock_Lamp_003
+    100008: Clock_Lamp_004
+    100010: Clock_Lamp_006
+    100012: Clock_Lamp_007
+    100014: Clock_Lamp_008
+    100016: Clock_Lamp_05
+    100018: Clock_Lamp_09
+    100020: //RootNode
+    100022: Metal_Parts_Clock
+    100024: Numbers
+    100026: Object002
+    100028: Object004
+    100030: Wall_Clock
+    400000: Arrow
+    400002: Clock_Energy
+    400004: Clock_Lamp_002
+    400006: Clock_Lamp_003
+    400008: Clock_Lamp_004
+    400010: Clock_Lamp_006
+    400012: Clock_Lamp_007
+    400014: Clock_Lamp_008
+    400016: Clock_Lamp_05
+    400018: Clock_Lamp_09
+    400020: //RootNode
+    400022: Metal_Parts_Clock
+    400024: Numbers
+    400026: Object002
+    400028: Object004
+    400030: Wall_Clock
+    2300000: Arrow
+    2300002: Clock_Energy
+    2300004: Clock_Lamp_002
+    2300006: Clock_Lamp_003
+    2300008: Clock_Lamp_004
+    2300010: Clock_Lamp_006
+    2300012: Clock_Lamp_007
+    2300014: Clock_Lamp_008
+    2300016: Clock_Lamp_05
+    2300018: Clock_Lamp_09
+    2300020: Metal_Parts_Clock
+    2300022: Numbers
+    2300024: Object002
+    2300026: Object004
+    2300028: Wall_Clock
+    3300000: Arrow
+    3300002: Clock_Energy
+    3300004: Clock_Lamp_002
+    3300006: Clock_Lamp_003
+    3300008: Clock_Lamp_004
+    3300010: Clock_Lamp_006
+    3300012: Clock_Lamp_007
+    3300014: Clock_Lamp_008
+    3300016: Clock_Lamp_05
+    3300018: Clock_Lamp_09
+    3300020: Metal_Parts_Clock
+    3300022: Numbers
+    3300024: Object002
+    3300026: Object004
+    3300028: Wall_Clock
+    4300000: Numbers
+    4300002: Object002
+    4300004: Arrow
+    4300006: Clock_Lamp_09
+    4300008: Clock_Lamp_05
+    4300010: Clock_Lamp_007
+    4300012: Clock_Lamp_003
+    4300014: Clock_Lamp_008
+    4300016: Clock_Lamp_004
+    4300018: Clock_Lamp_002
+    4300020: Clock_Lamp_006
+    4300022: Clock_Energy
+    4300024: Object004
+    4300026: Metal_Parts_Clock
+    4300028: Wall_Clock
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

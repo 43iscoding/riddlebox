@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: f9bfe77fa38377e48b42aea336b50e3c
+timeCreated: 1427631464
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Clock_Lamp_010
+    100004: Cylinder001
+    100006: III
+    100008: Level_02_Box
+    100010: //RootNode
+    100012: Line003
+    100014: Line004
+    100016: Line008
+    100018: Object005
+    100020: Object006
+    100022: Object007
+    100024: Object009
+    100026: Object010
+    100028: Round_Buttol_Left
+    100030: Round_Buttol_Left_Pod
+    100032: Round_Buttol_Right
+    100034: Round_Buttol_Right_Pod
+    100036: Tr_Buttol_Left
+    100038: Tr_Buttol_Left001
+    100040: Tr_Buttol_Left_Pod
+    100042: Tr_Buttol_Left_Pod001
+    400000: Box001
+    400002: Clock_Lamp_010
+    400004: Cylinder001
+    400006: III
+    400008: Level_02_Box
+    400010: //RootNode
+    400012: Line003
+    400014: Line004
+    400016: Line008
+    400018: Object005
+    400020: Object006
+    400022: Object007
+    400024: Object009
+    400026: Object010
+    400028: Round_Buttol_Left
+    400030: Round_Buttol_Left_Pod
+    400032: Round_Buttol_Right
+    400034: Round_Buttol_Right_Pod
+    400036: Tr_Buttol_Left
+    400038: Tr_Buttol_Left001
+    400040: Tr_Buttol_Left_Pod
+    400042: Tr_Buttol_Left_Pod001
+    2300000: Box001
+    2300002: Clock_Lamp_010
+    2300004: Cylinder001
+    2300006: III
+    2300008: Level_02_Box
+    2300010: Line003
+    2300012: Line004
+    2300014: Line008
+    2300016: Object005
+    2300018: Object006
+    2300020: Object007
+    2300022: Object009
+    2300024: Object010
+    2300026: Round_Buttol_Left
+    2300028: Round_Buttol_Left_Pod
+    2300030: Round_Buttol_Right
+    2300032: Round_Buttol_Right_Pod
+    2300034: Tr_Buttol_Left
+    2300036: Tr_Buttol_Left001
+    2300038: Tr_Buttol_Left_Pod
+    2300040: Tr_Buttol_Left_Pod001
+    3300000: Box001
+    3300002: Clock_Lamp_010
+    3300004: Cylinder001
+    3300006: III
+    3300008: Level_02_Box
+    3300010: Line003
+    3300012: Line004
+    3300014: Line008
+    3300016: Object005
+    3300018: Object006
+    3300020: Object007
+    3300022: Object009
+    3300024: Object010
+    3300026: Round_Buttol_Left
+    3300028: Round_Buttol_Left_Pod
+    3300030: Round_Buttol_Right
+    3300032: Round_Buttol_Right_Pod
+    3300034: Tr_Buttol_Left
+    3300036: Tr_Buttol_Left001
+    3300038: Tr_Buttol_Left_Pod
+    3300040: Tr_Buttol_Left_Pod001
+    4300000: Level_02_Box
+    4300002: Clock_Lamp_010
+    4300004: Object005
+    4300006: Object006
+    4300008: Box001
+    4300010: Cylinder001
+    4300012: Object007
+    4300014: Round_Buttol_Left
+    4300016: III
+    4300018: Round_Buttol_Left_Pod
+    4300020: Round_Buttol_Right
+    4300022: Round_Buttol_Right_Pod
+    4300024: Tr_Buttol_Left_Pod
+    4300026: Tr_Buttol_Left
+    4300028: Tr_Buttol_Left001
+    4300030: Tr_Buttol_Left_Pod001
+    4300032: Line003
+    4300034: Object009
+    4300036: Line004
+    4300038: Object010
+    4300040: Line008
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

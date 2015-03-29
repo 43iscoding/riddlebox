@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: 5dfd81ba57365774485cab063ca2a396
-timeCreated: 1427628186
+guid: 189a278d5aac5b14d81f5b0248f73e41
+timeCreated: 1427631531
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Wall_01_R_MeshPart0
-    100004: Wall_01_R_MeshPart1
     400000: //RootNode
-    400002: Wall_01_R_MeshPart0
-    400004: Wall_01_R_MeshPart1
-    2300000: Wall_01_R_MeshPart0
-    2300002: Wall_01_R_MeshPart1
-    3300000: Wall_01_R_MeshPart0
-    3300002: Wall_01_R_MeshPart1
-    4300000: Wall_01_R_MeshPart0
-    4300002: Wall_01_R_MeshPart1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Bottom_Box
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -6,6 +6,7 @@ using System.Collections;
 
 public class GameLogic : MonoBehaviour
 {
+	public GameObject GameUI;
 	//List<Box> boxes = new List<Box>();
 	int currentBoxIndex;
 	Box currentBox;
@@ -22,7 +23,7 @@ public class GameLogic : MonoBehaviour
 		Debug.Log("Starting gamelogic!");
 		Music.Play(MusicTrackKind.InGame);
 		The.gameLogic = this;
-
+		Instantiate(GameUI);
 		AddAllBoxes();
 		
 		//ShowNextBox();
