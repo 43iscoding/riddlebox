@@ -14,7 +14,7 @@ PlayerSettings:
   companyName: Garage48
   productName: Riglbox
   cloudProjectId: 
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 073729928fb98e74cbcb48e4b742de22, type: 3}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
