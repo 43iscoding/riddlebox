@@ -8,6 +8,7 @@ public class DoorsPreloadScreen : PreloadScreen
 	public Image TopDoor;
 	public Image BottomDoor;
 	public Image Background;
+	public Image Logo;
 	public Image Loader;
 	public Image LoadingProgress;
 	public Action onAnimationCompleted;
@@ -38,6 +39,7 @@ public class DoorsPreloadScreen : PreloadScreen
 			HideProgress();
 
 			TweenAlpha.Begin(Background.gameObject, CloseAnimationTime, 1).from = 0;
+			TweenAlpha.Begin(Logo.gameObject, CloseAnimationTime, 1).from = 0;
 			TweenPosition tweenPositionTop = TweenPosition.Begin(TopDoor.gameObject, CloseAnimationTime, new Vector3(0, topOffset));
 			TweenPosition tweenPositionBottom = TweenPosition.Begin(BottomDoor.gameObject, CloseAnimationTime, new Vector3(0, bottomOffset));
 
@@ -101,6 +103,7 @@ public class DoorsPreloadScreen : PreloadScreen
 			TweenAlpha.Begin (Loader.gameObject, OpenAnimationTime, 0);
 		}
 			TweenAlpha.Begin(Background.gameObject, OpenAnimationTime, 0);
+			TweenAlpha.Begin(Logo.gameObject, OpenAnimationTime, 0);
 		TweenPosition.Begin(TopDoor.gameObject, OpenAnimationTime, new Vector3(0, topOffsetHide)).method = UITweener.Method.EaseIn;
 		TweenPosition tweenPositionBottom = TweenPosition.Begin(BottomDoor.gameObject, OpenAnimationTime, new Vector3(0, bottomOffsetHide));
 			tweenPositionBottom.method = UITweener.Method.EaseIn;

@@ -6,16 +6,33 @@ public class MusicButton : MonoBehaviour {
 	public Image icon;
 	public Sprite on;
 	public Sprite off;
-	// Use this for initialization
-	bool musicOn=true;
+
+
+	void Awake()
+	{
+
+		SyncSound();
+	}
 
 	public void Toggle () {
-		if (musicOn) {
+
+
+		SoundUtils.ToggleMusic();
+		SyncSound();
+
+		
+	}
+
+	void SyncSound()
+	{
+
+		if (!SoundUtils.IsMusicMuted())
+		{
 			icon.sprite = on;
-			musicOn=false;
-		} else {
+		}
+		else
+		{
 			icon.sprite = off;
-			musicOn=true;
 		}
 	}
 

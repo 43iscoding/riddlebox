@@ -13,6 +13,8 @@ public class Handle : MonoBehaviour
 	public List<float> needAngle;
 	public float treshold;
 	public Axis axis = Axis.Z;
+	public GameObject AllOkGameObject;
+	public GameObject ErrorGameObject;
 
 	public bool IsOk()
 	{
@@ -39,9 +41,17 @@ public class Handle : MonoBehaviour
 			}
 			if (Mathf.Abs(f) < treshold)
 			{
+				if (ErrorGameObject != null)
+					ErrorGameObject.SetActive(false);
+				if (AllOkGameObject != null)
+					AllOkGameObject.SetActive(true);
 				return true;
 			}
 		}
+		if (ErrorGameObject != null)
+			ErrorGameObject.SetActive(true);
+		if (AllOkGameObject != null)
+			AllOkGameObject.SetActive(false);
 		return false;
 	}
 

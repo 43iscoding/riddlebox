@@ -7,6 +7,7 @@ public class Rotatable : MonoBehaviour
 
 	Vector3 prevMousePosition;
 	Vector3 currentMousePosition;
+	public RandomRotation randomRotation;
 
 	bool dragging;
 
@@ -22,6 +23,10 @@ public class Rotatable : MonoBehaviour
 
 		if (Input.GetMouseButtonDown(0))
 		{
+			if (randomRotation != null)
+			{
+				randomRotation.enabled = false;
+			}
 			prevMousePosition = currentMousePosition;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hitInfo;

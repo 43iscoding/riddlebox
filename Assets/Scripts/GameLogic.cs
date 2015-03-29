@@ -11,6 +11,8 @@ public class GameLogic : MonoBehaviour
 
 	void Start()
 	{
+		Debug.Log("Starting gamelogic!");
+		Music.Play(MusicTrackKind.InGame);
 		The.gameLogic = this;
 
 		AddAllBoxes();
