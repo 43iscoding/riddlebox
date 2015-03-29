@@ -140,6 +140,9 @@ public class Level1Side : Side
 		Vector3 velocity = (Camera.main.transform.position - lockUp.transform.position).normalized*2;
 		lockUp.AddComponent<Rigidbody>().velocity += velocity;
 		lockDown.AddComponent<Rigidbody>().velocity += velocity;
+
+		SoundUtils.PlaySound(SoundManager.instance.otletaetKrizhka);
+
 		//Destroy(lockUp);
 		//Destroy(lockDown);
 		// TODO: drop down
