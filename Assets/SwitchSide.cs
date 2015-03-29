@@ -22,8 +22,21 @@ public class SwitchSide : Side
 
 	public override void OnUnlock()
 	{
+		StartCoroutine(WaitForWheel());
+
+	}
+
+	IEnumerator WaitForWheel()
+	{
+		Debug.Log("Wait for wheel");
+		while (!box.IsUnlocked(box.sides[0]))
+		{
+			yield return null;
+		}
+		Debug.Log("Door opens");
 		SoundUtils.PlaySound(SoundManager.instance.otkrivanie_dverki);
 		door.SetTrigger("open");
+		yield return new WaitForSeconds(2);
 		base.OnUnlock();
 	}
 

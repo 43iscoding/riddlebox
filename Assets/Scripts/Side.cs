@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Side : MonoBehaviour
 {
-	Box box;
+	protected internal Box box;
 
 	public void SetBox(Box box1)
 	{

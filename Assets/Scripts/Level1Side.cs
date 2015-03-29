@@ -150,10 +150,6 @@ public class Level1Side : Side
 
 		SoundUtils.PlaySound(SoundManager.instance.otletaetKrizhka);
 
-		//Destroy(lockUp);
-		//Destroy(lockDown);
-		// TODO: drop down
-
 		// MELODY
 		Debug.Log("Play sound");
 
@@ -163,6 +159,7 @@ public class Level1Side : Side
 		}
 
 		Debug.Log("Viezhaet ruchka");
+		SoundUtils.PlaySound(SoundManager.instance.unlocking_2);
 
 		{
 			// Viezhaet ruchka

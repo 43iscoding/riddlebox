@@ -62,4 +62,9 @@ public class Box : MonoBehaviour
 			yield return null;
 		}
 	}
+
+	public bool IsUnlocked(Side side)
+	{
+		return unlocked.Contains(side);
+	}
 }
