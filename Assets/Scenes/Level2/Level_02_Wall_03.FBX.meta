@@ -1,0 +1,123 @@
+fileFormatVersion: 2
+guid: 28f41cf6ded4593439f10893ebb90eef
+timeCreated: 1427617426
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Door_01
+    100002: //RootNode
+    100004: Lock_Arrows_009
+    100006: Lock_Arrows_01
+    100008: Lock_Arrows_010
+    100010: Lock_Arrows_011
+    100012: Lock_Arrows_012
+    100014: Lock_Arrows_013
+    100016: Lock_Arrows_014
+    100018: Lock_Arrows_015
+    100020: Lock_Arrows_016
+    100022: Wall_01
+    400000: Door_01
+    400002: //RootNode
+    400004: Lock_Arrows_009
+    400006: Lock_Arrows_01
+    400008: Lock_Arrows_010
+    400010: Lock_Arrows_011
+    400012: Lock_Arrows_012
+    400014: Lock_Arrows_013
+    400016: Lock_Arrows_014
+    400018: Lock_Arrows_015
+    400020: Lock_Arrows_016
+    400022: Wall_01
+    2300000: Door_01
+    2300002: Lock_Arrows_009
+    2300004: Lock_Arrows_01
+    2300006: Lock_Arrows_010
+    2300008: Lock_Arrows_011
+    2300010: Lock_Arrows_012
+    2300012: Lock_Arrows_013
+    2300014: Lock_Arrows_014
+    2300016: Lock_Arrows_015
+    2300018: Lock_Arrows_016
+    2300020: Wall_01
+    3300000: Door_01
+    3300002: Lock_Arrows_009
+    3300004: Lock_Arrows_01
+    3300006: Lock_Arrows_010
+    3300008: Lock_Arrows_011
+    3300010: Lock_Arrows_012
+    3300012: Lock_Arrows_013
+    3300014: Lock_Arrows_014
+    3300016: Lock_Arrows_015
+    3300018: Lock_Arrows_016
+    3300020: Wall_01
+    4300000: Door_01
+    4300002: Lock_Arrows_01
+    4300004: Wall_01
+    4300006: Lock_Arrows_009
+    4300008: Lock_Arrows_010
+    4300010: Lock_Arrows_011
+    4300012: Lock_Arrows_012
+    4300014: Lock_Arrows_013
+    4300016: Lock_Arrows_014
+    4300018: Lock_Arrows_015
+    4300020: Lock_Arrows_016
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

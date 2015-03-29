@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class rotateSwitch : MonoBehaviour 
 {
 	static int locks = 0;
+	public static bool complete;
 	public bool vertical;
-	public bool complete;
 	
 	public List<GameObject> switchesToTurn;
 	public List<GameObject> allSwitches;
@@ -42,7 +43,6 @@ public class rotateSwitch : MonoBehaviour
 
 		while (!t.IsEnded())
 		{
-		
 			transform.localRotation = Quaternion.Lerp(from, to, t.GetCompletePercent());
 			
 			yield return null;
@@ -69,12 +69,8 @@ public class rotateSwitch : MonoBehaviour
 					
 			if (!switch1.vertical && switch3.vertical && switch5.vertical && !switch7.vertical)
 			{
-				for (int i = 0; i < allSwitches.Count; i++)
-				{
-					allSwitches[i].GetComponent<rotateSwitch>().complete = true;
-			    }
-			    	
-			    print ("complete");
+				complete = true;
+			    print ("switches complete");
 			}
 		}
 	}
