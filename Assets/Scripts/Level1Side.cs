@@ -88,7 +88,7 @@ public class Level1Side : Side
 
 		foreach (var h in topHandles)
 		{
-			//h.LockRotation();
+			h.TurnGreen();
 			h.GetComponent<MeshRenderer>().materials[1].SetTexture(0, green.mainTexture);
 		}
 		Debug.Log("Top Handles Unlocked");
@@ -137,8 +137,11 @@ public class Level1Side : Side
 		{
 			yield return null;
 		}
-		Destroy(lockUp);
-		Destroy(lockDown);
+		Vector3 velocity = (Camera.main.transform.position - lockUp.transform.position).normalized*2;
+		lockUp.AddComponent<Rigidbody>().velocity += velocity;
+		lockDown.AddComponent<Rigidbody>().velocity += velocity;
+		//Destroy(lockUp);
+		//Destroy(lockDown);
 		// TODO: drop down
 
 		// MELODY

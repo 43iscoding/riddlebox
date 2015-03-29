@@ -959,7 +959,7 @@ Transform:
   m_GameObject: {fileID: 136574}
   m_LocalRotation: {x: -5.62294394e-15, y: -1.50666303e-15, z: .258819044, w: .965925872}
   m_LocalPosition: {x: -.000158526134, y: -.000168440587, z: -3.05210074e-06}
-  m_LocalScale: {x: .610295653, y: .610295653, z: .610295653}
+  m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children:
   - {fileID: 464248}
   - {fileID: 426094}
@@ -1000,7 +1000,7 @@ Transform:
   m_GameObject: {fileID: 176488}
   m_LocalRotation: {x: -5.62294394e-15, y: -1.50666303e-15, z: .258819044, w: .965925872}
   m_LocalPosition: {x: -.000609726296, y: -.000167642618, z: -3.05210074e-06}
-  m_LocalScale: {x: .610295653, y: .610295653, z: .610295653}
+  m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children:
   - {fileID: 414468}
   - {fileID: 462716}
@@ -1128,7 +1128,7 @@ Transform:
   m_GameObject: {fileID: 150852}
   m_LocalRotation: {x: -5.62294394e-15, y: -1.50666303e-15, z: .258819044, w: .965925872}
   m_LocalPosition: {x: .000160662559, y: .000182464937, z: -3.02867852e-06}
-  m_LocalScale: {x: .610295653, y: .610295653, z: .610295653}
+  m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children:
   - {fileID: 456500}
   - {fileID: 477714}
@@ -1228,7 +1228,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -.000511999999, z: -.000230000005}
+  m_LocalPosition: {x: 0, y: -.000487999991, z: -.000230000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 465374}
@@ -2415,7 +2415,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 1
-  m_AngularDrag: 30
+  m_AngularDrag: 15
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2445,7 +2445,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 1
-  m_AngularDrag: 30
+  m_AngularDrag: 15
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2460,7 +2460,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 1
-  m_AngularDrag: 30
+  m_AngularDrag: 15
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2475,7 +2475,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 30
+  m_AngularDrag: 15
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -2505,7 +2505,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 1
-  m_AngularDrag: 30
+  m_AngularDrag: 15
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2521,7 +2521,7 @@ HingeJoint:
   m_Anchor: {x: 1, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: .999617755, y: .000385324238, z: .000501478324}
+  m_ConnectedAnchor: {x: .999617696, y: .000385305, z: .000501527276}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2553,7 +2553,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.00052900007, y: .000220000089, z: -.000102999991}
+  m_ConnectedAnchor: {x: -.000529000012, y: .00022000006, z: -.000102999991}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2585,7 +2585,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: .000546000083, y: -.000220000045, z: -.000103000064}
+  m_ConnectedAnchor: {x: .000546000025, y: -.000220000031, z: -.000103000049}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2617,7 +2617,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 6.22625703e-13, y: 1.47320188e-12, z: -9.42842507e-06}
+  m_ConnectedAnchor: {x: 0, y: 1.12395585e-12, z: -9.42842598e-06}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2649,7 +2649,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: .000546000083, y: .000220000089, z: -.000103000035}
+  m_ConnectedAnchor: {x: .000546000025, y: .00022000006, z: -.000102999991}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2681,7 +2681,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.000529000128, y: -.000219000052, z: -.00010300002}
+  m_ConnectedAnchor: {x: -.000529000012, y: -.000219000023, z: -.000103000049}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2713,7 +2713,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -2.91038305e-11, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: .00038234712, y: -.000380998099, z: .00050150376}
+  m_ConnectedAnchor: {x: .000382347091, y: -.000380998012, z: .00050150376}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -3595,7 +3595,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: 0, g: 1, b: .213793039, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 8
   m_Range: 1.09000003
   m_SpotAngle: 30
