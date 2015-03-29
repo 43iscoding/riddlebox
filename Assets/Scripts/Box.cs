@@ -31,8 +31,10 @@ public class Box : MonoBehaviour
 
 	void UnlockBox()
 	{
-		The.gameLogic.OnBoxUnlocked();
-
+		if (The.gameLogic != null)
+		{
+			The.gameLogic.OnBoxUnlocked();
+		}
 		gameObject.SetActive(false);// TODO: fade animation
 	}
 
