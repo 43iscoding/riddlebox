@@ -4,7 +4,8 @@ using System.Collections;
 public class WheelButton : MonoBehaviour
 {
 	public int index;
-	public bool open;
+	internal bool open;
+	internal bool ready;
 
 	internal bool close {
 		get { return !open; }
@@ -13,8 +14,7 @@ public class WheelButton : MonoBehaviour
 	void Start()
 	{
 		gameObject.AddComponent<MeshCollider>();
-		open = true;
-		UpdateAnimator();
+		SetOpen();
 	}
 
 	void OnMouseDown()
@@ -26,6 +26,19 @@ public class WheelButton : MonoBehaviour
 	{
 		open = false;
 		UpdateAnimator();
+		SetReady();
+	}
+
+	void SetReady()
+	{
+		StartCoroutine(SetReaadyC());
+	}
+
+	IEnumerator SetReaadyC()
+	{
+		ready = false;
+		yield return new WaitForSeconds(0.5f);
+		ready = true;
 	}
 
 	void UpdateAnimator()
@@ -38,5 +51,6 @@ public class WheelButton : MonoBehaviour
 	{
 		open = true;
 		UpdateAnimator();
+		SetReady();
 	}
 }

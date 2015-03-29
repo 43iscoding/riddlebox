@@ -144,7 +144,11 @@ Material:
       data:
         first:
           name: _Rotation
+<<<<<<< HEAD
         second: -92.0970001
+=======
+        second: -52.0097008
+>>>>>>> 2b8e4cca57f41066aadd2397a57d83dffc5fa170
     m_Colors:
       data:
         first:

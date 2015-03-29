@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class WheelSide : Side
 {
+	public MeshRenderer[] lights;
 	public WheelButton[] buttons;
-	bool[] combination =
+	public Texture2D green;
+
+	bool[] combination = // must be closed
 		{
 			false, // 0
 			true, // 1
@@ -18,6 +21,7 @@ public class WheelSide : Side
 			false, //7
 			};
 
+
 	void Start()
 	{
 		StartCoroutine(Check());
@@ -27,15 +31,24 @@ public class WheelSide : Side
 	{
 		while (true)
 		{
+		next:
+			yield return null;
 			bool ok = true;
+
 			for (int i = 0; i < 8; i++)
 			{
-				ok = buttons[i].close == combination[i];
+				if (!buttons[i].ready)
+				{
+					goto next;
+				}
+			}
+			for (int i = 0; i < 8; i++)
+			{
+				ok = ok && buttons[i].close == combination[i];
 				if (buttons[i].close && !combination[i])
 				{
 					Abort();
-					ok = false;
-					break;
+					goto next;
 				}
 			}
 
@@ -43,11 +56,10 @@ public class WheelSide : Side
 			{
 				break;
 			}
-			yield return null;
 		}
 
 		Debug.Log("Wheel open");
-		//OnUnlock();
+		OnUnlock();
 	}
 
 	void Abort()
@@ -56,6 +68,15 @@ public class WheelSide : Side
 		foreach (var button in buttons)
 		{
 			button.SetOpen();
+		}
+	}
+
+	public override void OnUnlock()
+	{
+		base.OnUnlock();
+		foreach (var light in lights)
+		{
+			light.material.mainTexture = green;
 		}
 	}
 }

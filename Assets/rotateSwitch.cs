@@ -6,25 +6,28 @@ using System.Collections.Generic;
 public class rotateSwitch : MonoBehaviour 
 {
 	static int locks = 0;
-	public static bool complete;
 	public bool vertical;
+	public bool needVertical;
+	public bool ignore;
 	
 	public List<GameObject> switchesToTurn;
-	public List<GameObject> allSwitches;
 
-	// Use this for initialization
-	void Start () {
-		vertical = true;
-		complete = false;
+	void Start ()
+	{
+		SetCorrectRotation();
 	}
 	
 	public void TurnSwitch()
 	{
-		StartCoroutine(TweenRotate());
-	//	transform.RotateAround(transform.position, transform.forward, 90);
-		vertical = !vertical;	
+		vertical = !vertical;
+		SetCorrectRotation();
 	}
-	
+
+	void SetCorrectRotation()
+	{
+		StartCoroutine(TweenRotate());
+	}
+
 	IEnumerator TweenRotate()
 	{
 		locks++;
@@ -33,11 +36,11 @@ public class rotateSwitch : MonoBehaviour
 		Quaternion to;
 		if (vertical)
 		{
-			to = Quaternion.Euler(0,0,90);
+			to = Quaternion.Euler(0,-90,0);
 		}
 		else
 		{
-			to = Quaternion.Euler(0,0,0);			
+			to = Quaternion.Euler(0,-90,90);			
 		}
 		
 
@@ -61,17 +64,12 @@ public class rotateSwitch : MonoBehaviour
 			{
 				switchesToTurn[i].GetComponent<rotateSwitch>().TurnSwitch();
 			}
-			
-			rotateSwitch switch1 = allSwitches[1].GetComponent<rotateSwitch>();
-			rotateSwitch switch3 = allSwitches[3].GetComponent<rotateSwitch>();
-			rotateSwitch switch5 = allSwitches[5].GetComponent<rotateSwitch>();
-			rotateSwitch switch7 = allSwitches[7].GetComponent<rotateSwitch>();
-					
-			if (!switch1.vertical && switch3.vertical && switch5.vertical && !switch7.vertical)
-			{
-				complete = true;
-			    print ("switches complete");
-			}
+			SwitchSide.instance.Check();
 		}
+	}
+
+	public bool IsOk()
+	{
+		return ignore || vertical == needVertical;
 	}
 }
