@@ -22,6 +22,7 @@ public class SwitchSide : Side
 
 	public override void OnUnlock()
 	{
+		SoundUtils.PlaySound(SoundManager.instance.otkrivanie_dverki);
 		door.SetTrigger("open");
 		base.OnUnlock();
 	}

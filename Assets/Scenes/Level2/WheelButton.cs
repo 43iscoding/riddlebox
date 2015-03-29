@@ -19,6 +19,7 @@ public class WheelButton : MonoBehaviour
 
 	void OnMouseDown()
 	{
+		SoundUtils.PlaySound(SoundManager.instance.nazhatie_knopki);
 		SetClose();
 	}
 

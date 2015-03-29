@@ -27,6 +27,7 @@ ModelImporter:
     100038: Tr_Buttol_Left001
     100040: Tr_Buttol_Left_Pod
     100042: Tr_Buttol_Left_Pod001
+    100044: Line002
     400000: Box001
     400002: Clock_Lamp_010
     400004: Cylinder001
@@ -49,6 +50,7 @@ ModelImporter:
     400038: Tr_Buttol_Left001
     400040: Tr_Buttol_Left_Pod
     400042: Tr_Buttol_Left_Pod001
+    400044: Line002
     2300000: Box001
     2300002: Clock_Lamp_010
     2300004: Cylinder001
@@ -70,6 +72,7 @@ ModelImporter:
     2300036: Tr_Buttol_Left001
     2300038: Tr_Buttol_Left_Pod
     2300040: Tr_Buttol_Left_Pod001
+    2300042: Line002
     3300000: Box001
     3300002: Clock_Lamp_010
     3300004: Cylinder001
@@ -91,6 +94,7 @@ ModelImporter:
     3300036: Tr_Buttol_Left001
     3300038: Tr_Buttol_Left_Pod
     3300040: Tr_Buttol_Left_Pod001
+    3300042: Line002
     4300000: Level_02_Box
     4300002: Clock_Lamp_010
     4300004: Object005
@@ -112,6 +116,7 @@ ModelImporter:
     4300036: Line004
     4300038: Object010
     4300040: Line008
+    4300042: Line002
     9500000: //RootNode
   materials:
     importMaterials: 1

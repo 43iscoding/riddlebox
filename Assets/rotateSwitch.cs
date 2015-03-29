@@ -56,7 +56,8 @@ public class rotateSwitch : MonoBehaviour
 	void OnMouseDown()
 	{
 		if (locks == 0)
-		{	
+		{
+			SoundUtils.PlaySound(SoundManager.instance.unlocking);
 			TurnSwitch();
 			
 			for (int i = 0; i < switchesToTurn.Count; i++)

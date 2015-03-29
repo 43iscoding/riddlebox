@@ -43,7 +43,7 @@ public class Level1Side : Side
 		foreach (var door in doors)
 		{
 			door.gameObject.AddComponent<MeshCollider>().convex = true;
-			door.gameObject.AddComponent<RotateWidget>();
+			door.gameObject.AddComponent<RotateWidget>().onStart = SoundManager.instance.krutilki;
 			door.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 		}
 
@@ -65,6 +65,10 @@ public class Level1Side : Side
 
 	IEnumerator CheckTopHandles()
 	{
+		foreach (var h in topHandles)
+		{
+			h.GetComponent<SimpleRotate>().onRotate = SoundManager.instance.krutilki;
+		}
 		for (; ; )
 		{
 			bool allOk = true;

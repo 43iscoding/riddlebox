@@ -68,6 +68,7 @@ public class WheelSide : Side
 	void Abort()
 	{
 		Debug.Log("Abort");
+		SoundUtils.PlaySound(SoundManager.instance.nazhatie_knopki);
 		foreach (var button in buttons)
 		{
 			button.SetOpen();
