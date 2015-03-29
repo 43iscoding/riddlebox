@@ -277,12 +277,25 @@ public static class UIUtils
 		Localize(label.transform, key);
 	}
 
-	public static void SetTimeout(Action callBack, int i)
+	public static void SetTimeout(Action callBack, int i, bool DontDestroy=false)
 	{
 		//TODO: ochenj nuzhna eta funkcija v normaljnom variante, help :(
 		//funkcija vipolnjajet action startLoading cherez i millisekund
+
+		if (i == 0)
+		{
+			callBack();
+			return;
+		}
+
 		float seconds = i / 1000f;
 		GameObject gameObject = new GameObject("TimeoutScale" + i);
+
+		if (DontDestroy)
+		{
+			GameObject.DontDestroyOnLoad(gameObject);
+		}
+
 		TweenScale comp = TweenScale.Begin(gameObject, seconds, Vector3.one);
 		EventDelegate.Set(comp.onFinished, () => {
 			Object.Destroy(gameObject);

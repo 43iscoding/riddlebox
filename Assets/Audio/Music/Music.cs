@@ -37,6 +37,7 @@ public class Music : MonoBehaviour
 			Destroy(gameObject);
 			return;
 		}
+		DontDestroyOnLoad(gameObject);
 
 		RegisterSigleton();
 		SoundUtils.InitSounds();

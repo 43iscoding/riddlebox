@@ -10,6 +10,7 @@ GameObject:
   - 224: {fileID: 22442058}
   - 222: {fileID: 22261198}
   - 114: {fileID: 11449840}
+  - 114: {fileID: 11482118}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -64,6 +65,7 @@ GameObject:
   - 224: {fileID: 22490572}
   - 222: {fileID: 22224630}
   - 114: {fileID: 11412508}
+  - 114: {fileID: 11419418}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -99,6 +101,7 @@ GameObject:
   - 224: {fileID: 22499524}
   - 222: {fileID: 22240022}
   - 114: {fileID: 11441008}
+  - 114: {fileID: 11447728}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -278,20 +281,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: .833671391, b: .705882311, a: 1}
+  m_Color: {r: 1, g: .604969621, b: .301470578, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9eaeba898d590744d83c958c471f98d7, type: 3}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: 46fde5db4c8397841a560cc055c25452, type: 3}
+    m_FontSize: 47
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
     m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Highscores
+--- !u!114 &11419418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!114 &11420042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -426,7 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: .835294187, b: .70588237, a: 1}
+  m_Color: {r: 1, g: .603921592, b: .301960796, a: 1}
   m_Sprite: {fileID: 21300000, guid: b2025e00d5eb20d4e807e601d15646f2, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -461,6 +478,20 @@ MonoBehaviour:
   icon: {fileID: 11441008}
   on: {fileID: 21300000, guid: 1302dd3dca90e6746a2e6d51385f7a9a, type: 3}
   off: {fileID: 21300000, guid: b2025e00d5eb20d4e807e601d15646f2, type: 3}
+--- !u!114 &11447728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!114 &11449840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -473,9 +504,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: .833671391, b: .705882311, a: 1}
+  m_Color: {r: 1, g: .604969621, b: .301470578, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9eaeba898d590744d83c958c471f98d7, type: 3}
+    m_Font: {fileID: 12800000, guid: 46fde5db4c8397841a560cc055c25452, type: 3}
     m_FontSize: 47
     m_FontStyle: 0
     m_BestFit: 0
@@ -520,6 +551,20 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_AllowActivationOnMobileDevice: 0
+--- !u!114 &11482118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!114 &11482264
 MonoBehaviour:
   m_ObjectHideFlags: 1

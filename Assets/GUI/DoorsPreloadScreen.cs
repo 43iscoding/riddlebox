@@ -11,10 +11,12 @@ public class DoorsPreloadScreen : PreloadScreen
 	public Image Logo;
 	public Image Loader;
 	public Image LoadingProgress;
+	public AudioClip CloseClip;
 	public Action onAnimationCompleted;
 	public Action onAnimationFinishCompleted;
 	public static PreloadScreen instance;
 	
+	public int CloseClipStartTimeout = 150;
 	public int topOffset = -10;
 	public int bottomOffset = 47;
 	public int topOffsetHide = -10;
@@ -30,18 +32,24 @@ public class DoorsPreloadScreen : PreloadScreen
 	{
 
 		//Debug.Log ("aa");
-			transform.parent = null;
-			DontDestroyOnLoad(transform.gameObject);
-			//transform.localPosition = new Vector3(20000, 20000, 20000);
+		transform.parent = null;
+		DontDestroyOnLoad(transform.gameObject);
+		//transform.localPosition = new Vector3(20000, 20000, 20000);
 
 
 
-			HideProgress();
+		HideProgress();
 
-			TweenAlpha.Begin(Background.gameObject, CloseAnimationTime, 1).from = 0;
-			TweenAlpha.Begin(Logo.gameObject, CloseAnimationTime, 1).from = 0;
-			TweenPosition tweenPositionTop = TweenPosition.Begin(TopDoor.gameObject, CloseAnimationTime, new Vector3(0, topOffset));
-			TweenPosition tweenPositionBottom = TweenPosition.Begin(BottomDoor.gameObject, CloseAnimationTime, new Vector3(0, bottomOffset));
+		TweenAlpha.Begin(Background.gameObject, CloseAnimationTime, 1).from = 0;
+		TweenAlpha.Begin(Logo.gameObject, CloseAnimationTime, 1).from = 0;
+		TweenPosition tweenPositionTop = TweenPosition.Begin(TopDoor.gameObject, CloseAnimationTime, new Vector3(0, topOffset));
+		TweenPosition tweenPositionBottom = TweenPosition.Begin(BottomDoor.gameObject, CloseAnimationTime, new Vector3(0, bottomOffset));
+
+
+		UIUtils.SetTimeout(() => { 
+		SoundUtils.PlaySoundDontDestroy(CloseClip,gameObject);
+
+		},CloseClipStartTimeout,true);
 
 		tweenPositionTop.from = new Vector3(0, topOffsetHide);
 		tweenPositionBottom.from = new Vector3(0, bottomOffsetHide);

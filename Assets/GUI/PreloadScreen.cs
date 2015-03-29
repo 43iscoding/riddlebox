@@ -160,7 +160,7 @@ public abstract class PreloadScreen : MonoBehaviour
     protected void OnLevelWasLoaded(int i)
     {
         //EndAnimation();
-		UIUtils.SetTimeout(EndAnimation,500);
+		UIUtils.SetTimeout(EndAnimation,500,true);
     }
 
     protected void LoadFinished()

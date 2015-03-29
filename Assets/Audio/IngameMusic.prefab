@@ -41,10 +41,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackKind: 2
   Mono:
-  - {fileID: 8300000, guid: d007e90bc9afd8445ba4e8353d758bcf, type: 3}
+  - {fileID: 8300000, guid: fd8c71b2f99696c40a67264e45f84018, type: 3}
   MonoLoopFrom: 0
   Stereo:
-  - {fileID: 8300000, guid: d007e90bc9afd8445ba4e8353d758bcf, type: 3}
+  - {fileID: 8300000, guid: fd8c71b2f99696c40a67264e45f84018, type: 3}
   StereoLoopFrom: 0
 --- !u!1001 &100100000
 Prefab:

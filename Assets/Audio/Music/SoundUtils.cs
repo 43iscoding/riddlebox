@@ -166,4 +166,13 @@ internal static class SoundUtils
 		Music.SetVolume(value);
 		PlayerPrefs.SetFloat("MusicVolume", value);
 	}
+
+	public static void PlaySoundDontDestroy(AudioClip clip, GameObject go)
+	{
+		GameObject.DontDestroyOnLoad(go);
+		AudioSource source = go.GetComponent<AudioSource>();
+		if (source == null) source = go.AddComponent<AudioSource>();
+		source.pitch = 1f;
+		source.PlayOneShot(clip, 1f);
+	}
 }

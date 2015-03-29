@@ -11,7 +11,6 @@ GameObject:
   - 20: {fileID: 2031214}
   - 92: {fileID: 9275516}
   - 124: {fileID: 12498208}
-  - 81: {fileID: 8146618}
   - 114: {fileID: 11449800}
   - 114: {fileID: 11437536}
   - 114: {fileID: 11476824}
@@ -195,13 +194,6 @@ Skybox:
   m_GameObject: {fileID: 102226}
   m_Enabled: 0
   m_CustomSkybox: {fileID: 2100000, guid: e89435ab1a2a8574b9b58dc7fa451731, type: 2}
---- !u!81 &8146618
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 102226}
-  m_Enabled: 1
 --- !u!92 &9275516
 Behaviour:
   m_ObjectHideFlags: 1

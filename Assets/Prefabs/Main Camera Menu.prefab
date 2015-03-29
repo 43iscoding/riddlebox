@@ -213,7 +213,6 @@ GameObject:
   - 20: {fileID: 2019194}
   - 92: {fileID: 9287014}
   - 124: {fileID: 12410360}
-  - 81: {fileID: 8156442}
   - 114: {fileID: 11429990}
   - 114: {fileID: 11487550}
   - 114: {fileID: 11475844}
@@ -2361,13 +2360,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300024, guid: 582580eb0e051544b8ff58f0276bf2d7, type: 3}
---- !u!81 &8156442
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 132492}
-  m_Enabled: 1
 --- !u!92 &9287014
 Behaviour:
   m_ObjectHideFlags: 1
@@ -2657,7 +2649,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132492}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 646b5bc27a658f447b1d929fd5ffbd70, type: 3}
   m_Name: 
