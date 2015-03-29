@@ -144,11 +144,7 @@ Material:
       data:
         first:
           name: _Rotation
-<<<<<<< Updated upstream
         second: -27.9250603
-=======
-        second: -35.2895317
->>>>>>> Stashed changes
     m_Colors:
       data:
         first:
