@@ -39,6 +39,12 @@ public class GameLogic : MonoBehaviour
 		currentBoxIndex++;
 		Debug.Log("Current index = " + currentBoxIndex);
 
+		if (The.box != null)
+		{
+			//The.box.gameObject.SetActive(false); // TODO: fade animation
+			TweenScale.Begin(The.box.gameObject, 0.5f, Vector3.zero);
+			The.box = null;
+		}
 		if (currentBoxIndex >= 2)
 		{
 			currentBoxIndex = 0;
@@ -53,7 +59,11 @@ public class GameLogic : MonoBehaviour
 
 	void LoadNextScene()
 	{
-		StartCoroutine(LoadNextSceneC());
+		int levelIndex = currentBoxIndex + 1;
+		PreloadScreen.Load(levelIndex,null,true);
+
+
+		//StartCoroutine(LoadNextSceneC());
 	}
 
 	IEnumerator LoadNextSceneC()

@@ -39,6 +39,14 @@ public class Cheats : MonoBehaviour {
 				Utils.SetTimeScale(10);
 			}
 		}
+		if (Input.GetKeyDown(KeyCode.U))
+		{
+			The.gameLogic.OnBoxUnlocked();
+		}
+		if (Utils.GetKeyDown(KeyCode.Return, alt: true))
+		{
+			Utils.ToggleFullscreen();
+		}
 		if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
 		{
 			if (Math.Abs(Time.timeScale - 0) > Utils.Epsilon)

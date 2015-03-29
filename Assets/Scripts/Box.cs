@@ -5,7 +5,13 @@ using System.Collections;
 public class Box : MonoBehaviour
 {
 	public List<Side> sides;
-	HashSet<Side> unlocked = new HashSet<Side>(); 
+	HashSet<Side> unlocked = new HashSet<Side>();
+
+
+	void Awake()
+	{
+		The.box = this;
+	}
 
 	void Start()
 	{
@@ -35,7 +41,6 @@ public class Box : MonoBehaviour
 		{
 			The.gameLogic.OnBoxUnlocked();
 		}
-		gameObject.SetActive(false);// TODO: fade animation
 	}
 
 	public void Show()

@@ -14,6 +14,8 @@ public abstract class PreloadScreen : MonoBehaviour
 
     protected bool animationStarted = false;
 
+	bool addictive = false;
+
     void Awake()
     {
         instance = this;
@@ -27,7 +29,7 @@ public abstract class PreloadScreen : MonoBehaviour
 
     public void StartAnimation()
     {
-		Debug.Log("Start animation!");
+		//Debug.Log("Start animation!");
         if (animationStarted) return;
 
         animationStarted = true;
@@ -43,7 +45,7 @@ public abstract class PreloadScreen : MonoBehaviour
 
     public void EndAnimation()
 	{
-		Debug.Log("end animation!");
+		//Debug.Log("end animation!");
         CancelInvoke("EndAnimation");
 
         if (!animationStarted) return;
@@ -53,16 +55,16 @@ public abstract class PreloadScreen : MonoBehaviour
     }
     protected abstract void _EndAnimation();
 
-	public static void Load(int sceneIndex, Action onComplete = null)
+	public static void Load(int sceneIndex, Action onComplete = null, bool add=false)
 	{
 		onLoadComplete = onComplete;
 		sceneToLoadIndex = sceneIndex;
 		sceneToLoad = "";
 
-		BeginLoading();
+		BeginLoading(add);
 	}
 
-	static void BeginLoading()
+	static void BeginLoading(bool add=false)
 	{
 		if (instance == null && prefab != null) instance = Instantiate(prefab) as PreloadScreen;
 		if (instance == null)
@@ -72,6 +74,7 @@ public abstract class PreloadScreen : MonoBehaviour
 		}
 		else
 		{
+			instance.addictive = add;
 			instance.StartAnimation();
 		}
 	}
@@ -87,8 +90,7 @@ public abstract class PreloadScreen : MonoBehaviour
 
     protected static void LoadStarted()
     {
-		bool addictive = true;
-		if (!addictive || PreloadScreen.instance==null)
+		if (PreloadScreen.instance==null)
 		{
 			if (sceneToLoadIndex >= 0)
 			{
@@ -102,12 +104,58 @@ public abstract class PreloadScreen : MonoBehaviour
 		}
 		else
 		{
-			PreloadScreen.instance.StartCoroutine(LoadLevelAdd());
+			if (PreloadScreen.instance.addictive)
+			{
+				PreloadScreen.instance.StartCoroutine(LoadLevelAddAsync());
+			}
+			else
+			{
+				PreloadScreen.instance.StartCoroutine(LoadLevelAsync());
+			}
 		}
     }
 
 
-	static IEnumerator LoadLevelAdd()
+	static IEnumerator LoadLevelAddAsync()
+	{
+#if UNITY_FLASH
+        if (sceneToLoadIndex >= 0)
+		{
+			Application.LoadLevel(sceneToLoadIndex);
+		}
+		else
+		{
+			Application.LoadLevel(sceneToLoad);
+		}
+        yield break;
+#else
+		//Application.backgroundLoadingPriority = ThreadPriority.Low;
+		AsyncOperation async;
+		if (sceneToLoadIndex >= 0)
+		{
+			async = Application.LoadLevelAdditiveAsync(sceneToLoadIndex);
+		}
+		else
+		{
+			async = Application.LoadLevelAdditiveAsync(sceneToLoad);
+		}
+		async.allowSceneActivation = false;
+
+		if (async == null)
+		{
+			yield break;
+		}
+		while (async.progress < 0.9f)
+		{
+			SetPreloadProgress(async.progress);
+			yield return null;
+		}
+		async.allowSceneActivation = true;
+		yield return async;
+#endif
+	}
+
+	static IEnumerator LoadLevelAsync()
 	{
 #if UNITY_FLASH
         if (sceneToLoadIndex >= 0)
