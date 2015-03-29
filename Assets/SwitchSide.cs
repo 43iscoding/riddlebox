@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +8,16 @@ public class SwitchSide : Side
 	public List<rotateSwitch> allSwitches;
 	public Animator door;
 
-	void Awake()
+	void Start()
 	{
 		instance = this;
+		//StartCoroutine(CheckC());
+	}
+
+	IEnumerator CheckC()
+	{
+		yield return new WaitForSeconds(1);
+		OnUnlock(); // TEMP:
 	}
 
 	public override void OnUnlock()

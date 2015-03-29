@@ -1,58 +1,61 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
 using System.Collections;
 
 public class GameLogic : MonoBehaviour
 {
-	List<Box> boxes = new List<Box>();
+	//List<Box> boxes = new List<Box>();
 	int currentBoxIndex;
 	Box currentBox;
 
-	void Start()
+	void Awake()
 	{
+		if (The.gameLogic != null)
+		{
+			Destroy(gameObject);
+			return;
+		}
+
+		//DontDestroyOnLoad(this);
 		Debug.Log("Starting gamelogic!");
 		Music.Play(MusicTrackKind.InGame);
 		The.gameLogic = this;
 
 		AddAllBoxes();
 		
-		ShowNextBox();
+		//ShowNextBox();
 	}
 
 	static void OnBoxLoaded(Box box)
 	{
-		box.gameObject.SetActive(false);
+		//box.gameObject.SetActive(false);
 	}
 
 	public void OnBoxUnlocked()
 	{
 		currentBoxIndex++;
-		if (currentBoxIndex >= boxes.Count)
+		Debug.Log("Current index = " + currentBoxIndex);
+
+		if (currentBoxIndex >= 2)
 		{
-			Win();
+			currentBoxIndex = 0;
+			LoadNextScene();
+			//Win();
 		}
 		else
 		{
-			ShowNextBox();
+			LoadNextScene();
 		}
 	}
 
-	void ShowNextBox()
+	void LoadNextScene()
 	{
-		currentBox = boxes[currentBoxIndex];
-		currentBox.transform.localPosition = Vector3.zero;
-		currentBox.Show();
-
-		PrepareNextBox();
+		StartCoroutine(LoadNextSceneC());
 	}
 
-	void PrepareNextBox()
-	{
-		StartCoroutine(LoadNextScene());
-	}
-
-	IEnumerator LoadNextScene()
+	IEnumerator LoadNextSceneC()
 	{
 		Camera main = Camera.main;
 		int levelIndex = currentBoxIndex + 1;
@@ -65,8 +68,6 @@ public class GameLogic : MonoBehaviour
 		var async = Application.LoadLevelAdditiveAsync(levelIndex);
 		async.allowSceneActivation = false;
 
-		Debug.Log("Loading " + async);
-
 		while (async.progress < 0.9f)
 		{
 			yield return null;
@@ -78,27 +79,18 @@ public class GameLogic : MonoBehaviour
 		{
 			if (main != c)
 			{
+				Debug.Log("Destry " + c);
 				Destroy(c.gameObject);
 			}
 		}
+		Destroy(currentBox);
+		yield return null;
 		AddAllBoxes();
-		Debug.Log("Loaded scene " + currentBoxIndex + 1);
+		Debug.Log("Loaded scene " + levelIndex);
 	}
 
 	void AddAllBoxes()
 	{
-		foreach (Box box in FindObjectsOfType<Box>())
-		{
-			if (!boxes.Contains(box))
-			{
-				boxes.Add(box);
-				OnBoxLoaded(box);
-			}
-		}
-	}
-
-	void Win()
-	{
-		Debug.Log("Win");
+		currentBox = FindObjectOfType<Box>();
 	}
 }

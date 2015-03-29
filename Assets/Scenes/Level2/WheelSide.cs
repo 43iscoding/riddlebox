@@ -29,6 +29,9 @@ public class WheelSide : Side
 
 	IEnumerator Check()
 	{
+		//yield return new WaitForSeconds(1);
+		//OnUnlock(); // TEMP:
+
 		while (true)
 		{
 		next:

@@ -99,6 +99,9 @@ public class Level1Side : Side
 
 	IEnumerator CheckBottom()
 	{
+		//yield return new WaitForSeconds(1);
+		//OnUnlock(); // temp:
+
 		// 4 HANDLES
 		for (; ; )
 		{

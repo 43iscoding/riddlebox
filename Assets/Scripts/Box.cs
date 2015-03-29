@@ -7,7 +7,7 @@ public class Box : MonoBehaviour
 	public List<Side> sides;
 	HashSet<Side> unlocked = new HashSet<Side>(); 
 
-	void Awake()
+	void Start()
 	{
 		foreach (var side in sides)
 		{
@@ -40,8 +40,11 @@ public class Box : MonoBehaviour
 
 	public void Show()
 	{
-		gameObject.SetActive(true); // TODO: show animation
-		StartCoroutine(ShowCoroutine());
+		if (!gameObject.activeSelf)
+		{
+			gameObject.SetActive(true); // TODO: show animation
+			//StartCoroutine(ShowCoroutine());
+		}
 	}
 
 	IEnumerator ShowCoroutine()

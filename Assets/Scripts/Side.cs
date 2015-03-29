@@ -13,6 +13,6 @@ public class Side : MonoBehaviour
 	public virtual void OnUnlock()
 	{
 		box.OnSideUnlocked(this);
-		gameObject.SetActive(false);
+		//gameObject.SetActive(false);
 	}
 }
