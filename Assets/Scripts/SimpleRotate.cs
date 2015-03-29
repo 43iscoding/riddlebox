@@ -14,7 +14,7 @@ public class SimpleRotate : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		prevMousePosition = currentMousePosition;
+		prevMousePosition = currentMousePosition = Input.mousePosition;
 	}
 
 	void OnMouseDrag()

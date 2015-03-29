@@ -296,6 +296,34 @@ Prefab:
       propertyPath: m_AngularDrag
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5494840, guid: d5a80c19a710b814abffcf5b41dfce1f, type: 2}
+      propertyPath: m_AngularDrag
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456354, guid: d5a80c19a710b814abffcf5b41dfce1f, type: 2}
+      propertyPath: m_AngularDrag
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444486, guid: d5a80c19a710b814abffcf5b41dfce1f, type: 2}
+      propertyPath: m_AngularDrag
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5432420, guid: d5a80c19a710b814abffcf5b41dfce1f, type: 2}
+      propertyPath: m_AngularDrag
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 10869036, guid: d5a80c19a710b814abffcf5b41dfce1f, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10869036, guid: d5a80c19a710b814abffcf5b41dfce1f, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10869036, guid: d5a80c19a710b814abffcf5b41dfce1f, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5a80c19a710b814abffcf5b41dfce1f, type: 2}
   m_IsPrefabParent: 0
