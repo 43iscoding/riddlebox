@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class Level2Side : Side
+public class Level1Side : Side
 {
 	public List<Handle> handles;
 	public Handle bottom;
@@ -60,6 +60,7 @@ public class Level2Side : Side
 			yield return null;
 		}
 		Debug.Log("Level completed");
+		OnUnlock();
 	}
 
 	IEnumerator CheckTopHandles()
