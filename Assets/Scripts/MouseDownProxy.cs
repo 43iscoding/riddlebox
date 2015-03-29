@@ -12,7 +12,14 @@ public class MouseDownProxy : MonoBehaviour
 		if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
 		{
 			go = hit.collider.gameObject;
-			go.SendMessage("OnMouseDown");
+			if (go != gameObject)
+			{
+				go.SendMessage("OnMouseDown");
+			}
+			else
+			{
+				go = null;
+			}
 		}
 	}
 	void OnMouseDrag()
