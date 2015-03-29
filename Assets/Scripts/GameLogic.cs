@@ -42,7 +42,10 @@ public class GameLogic : MonoBehaviour
 		if (The.box != null)
 		{
 			//The.box.gameObject.SetActive(false); // TODO: fade animation
-			TweenScale.Begin(The.box.gameObject, 0.5f, Vector3.zero);
+			TweenScale tweenScale = TweenScale.Begin(The.box.gameObject, 0.5f, Vector3.one * 0.001f);
+			EventDelegate.Set(tweenScale.onFinished, () => { 
+				UITweener.current.gameObject.SetActive(false);
+			});
 			The.box = null;
 		}
 		if (currentBoxIndex >= 2)
