@@ -19,6 +19,7 @@ GameObject:
   - 45: {fileID: 4515734}
   - 114: {fileID: 11488518}
   - 114: {fileID: 11455108}
+  - 81: {fileID: 8156080}
   m_Layer: 0
   m_Name: Main Camera Game
   m_TagString: MainCamera
@@ -194,6 +195,13 @@ Skybox:
   m_GameObject: {fileID: 102226}
   m_Enabled: 0
   m_CustomSkybox: {fileID: 2100000, guid: e89435ab1a2a8574b9b58dc7fa451731, type: 2}
+--- !u!81 &8156080
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102226}
+  m_Enabled: 1
 --- !u!92 &9275516
 Behaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +219,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 6.30000019
+  m_Intensity: 8
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -243,7 +251,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: .889705896, g: .813909471, b: .791576564, a: 1}
-  m_Intensity: .800000012
+  m_Intensity: 2.1500001
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10

@@ -2,50 +2,52 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayMelodyScript : MonoBehaviour {
-
+public class PlayMelodyScript : MonoBehaviour
+{
 	public string melodyString = "";
-	public string melodyPlayed = "";
-	public bool complete;
-	public List<AudioClip> audioClips;
+	string melodyPlayed = "";
+	internal bool complete;
+	public List<AudioSource> audioClips;
 	
-	AudioSource audioPlayer;
-
-	// Use this for initialization
-	void Start () {
-		audioPlayer = transform.GetComponent<AudioSource>();
-		complete = false;
-
-	}
-	
-	public void Play()
+	void Start()
 	{
-		StartCoroutine(PlayCouroutine ());	
+		complete = false;
 	}
-
 	
-	IEnumerator PlayCouroutine ()
+	void OnMouseDown()
+	{
+		StartCoroutine(PlayCouroutine());	
+	}
+	
+	IEnumerator PlayCouroutine()
 	{
 		if (melodyString != string.Empty)
 		{
-			for (int i = 0; i < melodyString.Length; i++)
+			foreach (var clip in audioClips)
 			{
-				string sound = melodyString.Substring(i, 1);
-				
-				if (sound == "a") { audioPlayer.clip = audioClips[0]; }
-				if (sound == "s") { audioPlayer.clip = audioClips[1]; }
-				if (sound == "d") { audioPlayer.clip = audioClips[2]; }
-				if (sound == "f") { audioPlayer.clip = audioClips[3]; }
-				if (sound == "g") { audioPlayer.clip = audioClips[4]; }
-	
-				audioPlayer.Play();
-				
-				while (audioPlayer.isPlaying)
+				clip.Play();
+
+				while (clip.isPlaying)
 				{
 					yield return null;
 				}
 			}
 		}
 	}
-	
+
+	public void OnPlay(string tone)
+	{
+		melodyPlayed += tone;
+
+		if (melodyPlayed.Length >= melodyString.Length)
+		{
+			string substring = melodyPlayed.Substring(melodyPlayed.Length - melodyString.Length);
+			Debug.Log(substring);
+			if (substring == melodyString)
+			{
+				complete = true;
+				print("complete");
+			}
+		}
+	}
 }

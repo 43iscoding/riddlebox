@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class RotateWidget : MonoBehaviour
 {
+	public AudioClip onStart;
 	GameObject handle;
 	Plane plane;
-	public AudioClip onStart;
 
 	void Start()
 	{
@@ -59,7 +59,7 @@ public class RotateWidget : MonoBehaviour
 			Vector3 newMouse = ray.GetPoint(enter);
 
 			Vector3 vector3 = newMouse - handle.transform.position;
-			GetComponent<Rigidbody>().AddForceAtPosition(vector3 * 0.5f, handle.transform.position, ForceMode.VelocityChange);
+			GetComponent<Rigidbody>().AddForceAtPosition(vector3 * Time.deltaTime * 0.5f * 100, handle.transform.position, ForceMode.VelocityChange);
 		}
 	}
 }

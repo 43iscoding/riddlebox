@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RandomRotation : MonoBehaviour {
+public class RandomRotation : MonoBehaviour
+{
 	public float speed=5;
 
 	void Update()
