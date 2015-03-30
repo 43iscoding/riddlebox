@@ -11,7 +11,6 @@ public class Level1Side : Side
 	public GameObject lockDown;
 
 	public List<Handle> doors;
-	public PlayMelodyScript melody;
 	public List<Handle> topHandles;
 	public Material green;
 
@@ -153,7 +152,7 @@ public class Level1Side : Side
 		// MELODY
 		Debug.Log("Play sound");
 
-		while (!melody.complete)
+		while (!PlayMelodyScript.complete)
 		{
 			yield return null;
 		}

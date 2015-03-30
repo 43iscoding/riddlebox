@@ -11,7 +11,6 @@ public class SwitchSide : Side
 	void Start()
 	{
 		instance = this;
-		door.SetTrigger("open");
 		//StartCoroutine(CheckC());
 	}
 

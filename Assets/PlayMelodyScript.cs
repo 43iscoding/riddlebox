@@ -6,7 +6,7 @@ public class PlayMelodyScript : MonoBehaviour
 {
 	public string melodyString = "";
 	string melodyPlayed = "";
-	internal bool complete;
+	internal static bool complete;
 	public List<AudioSource> audioClips;
 	
 	void Start()
@@ -42,7 +42,6 @@ public class PlayMelodyScript : MonoBehaviour
 		if (melodyPlayed.Length >= melodyString.Length)
 		{
 			string substring = melodyPlayed.Substring(melodyPlayed.Length - melodyString.Length);
-			Debug.Log(substring);
 			if (substring == melodyString)
 			{
 				complete = true;
