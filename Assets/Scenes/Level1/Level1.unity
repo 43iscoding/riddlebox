@@ -172,7 +172,6 @@ MonoBehaviour:
   doors:
   - {fileID: 1461395587}
   - {fileID: 1556058383}
-  melody: {fileID: 11427704, guid: d5a80c19a710b814abffcf5b41dfce1f, type: 2}
   topHandles:
   - {fileID: 880599433}
   - {fileID: 1515049509}
@@ -1014,11 +1013,11 @@ GameObject:
   - 4: {fileID: 491647276}
   - 33: {fileID: 491647283}
   - 23: {fileID: 491647282}
-  - 64: {fileID: 491647281}
   - 114: {fileID: 491647280}
   - 54: {fileID: 491647279}
   - 59: {fileID: 491647278}
   - 114: {fileID: 491647277}
+  - 65: {fileID: 491647281}
   m_Layer: 8
   m_Name: 1
   m_TagString: Widget
@@ -1119,19 +1118,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onStart: {fileID: 0}
---- !u!64 &491647281
-MeshCollider:
+--- !u!65 &491647281
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6421506, guid: d5a80c19a710b814abffcf5b41dfce1f,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 491647275}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300014, guid: 582580eb0e051544b8ff58f0276bf2d7, type: 3}
+  m_Size: {x: .000279400672, y: .000108129731, z: 4.37196613e-05}
+  m_Center: {x: 7.27595761e-12, y: 5.9631104e-19, z: 1.00044417e-11}
 --- !u!23 &491647282
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1178,8 +1176,8 @@ GameObject:
   - 54: {fileID: 514677540}
   - 59: {fileID: 514677539}
   - 114: {fileID: 514677538}
-  - 64: {fileID: 514677537}
   - 114: {fileID: 514677536}
+  - 65: {fileID: 514677537}
   m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
@@ -1218,19 +1216,18 @@ MonoBehaviour:
   axis: 2
   AllOkGameObject: {fileID: 0}
   ErrorGameObject: {fileID: 0}
---- !u!64 &514677537
-MeshCollider:
+--- !u!65 &514677537
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6450062, guid: d5a80c19a710b814abffcf5b41dfce1f,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 514677534}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300010, guid: 582580eb0e051544b8ff58f0276bf2d7, type: 3}
+  m_Size: {x: .000279400701, y: .000108129723, z: 4.37196686e-05}
+  m_Center: {x: -5.9631135e-19, y: 0, z: 1.00044417e-11}
 --- !u!114 &514677538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1670,11 +1667,11 @@ GameObject:
   - 4: {fileID: 724836759}
   - 33: {fileID: 724836766}
   - 23: {fileID: 724836765}
-  - 64: {fileID: 724836764}
   - 114: {fileID: 724836763}
   - 54: {fileID: 724836762}
   - 59: {fileID: 724836761}
   - 114: {fileID: 724836760}
+  - 65: {fileID: 724836764}
   m_Layer: 8
   m_Name: 2
   m_TagString: Widget
@@ -1775,19 +1772,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onStart: {fileID: 0}
---- !u!64 &724836764
-MeshCollider:
+--- !u!65 &724836764
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6483024, guid: d5a80c19a710b814abffcf5b41dfce1f,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 724836758}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300014, guid: 582580eb0e051544b8ff58f0276bf2d7, type: 3}
+  m_Size: {x: .000279400701, y: .000108129723, z: 4.37196686e-05}
+  m_Center: {x: -5.9631104e-19, y: 0, z: 1.00044417e-11}
 --- !u!23 &724836765
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1895,8 +1891,8 @@ GameObject:
   - 54: {fileID: 750874261}
   - 59: {fileID: 750874260}
   - 114: {fileID: 750874259}
-  - 64: {fileID: 750874258}
   - 114: {fileID: 750874257}
+  - 65: {fileID: 750874258}
   m_Layer: 8
   m_Name: 4
   m_TagString: Untagged
@@ -1935,19 +1931,18 @@ MonoBehaviour:
   axis: 2
   AllOkGameObject: {fileID: 0}
   ErrorGameObject: {fileID: 0}
---- !u!64 &750874258
-MeshCollider:
+--- !u!65 &750874258
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6466186, guid: d5a80c19a710b814abffcf5b41dfce1f,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 750874255}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300010, guid: 582580eb0e051544b8ff58f0276bf2d7, type: 3}
+  m_Size: {x: .000279400701, y: .000108129723, z: 4.37196686e-05}
+  m_Center: {x: -5.9631135e-19, y: 0, z: 1.00044417e-11}
 --- !u!114 &750874259
 MonoBehaviour:
   m_ObjectHideFlags: 0
