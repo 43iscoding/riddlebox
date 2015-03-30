@@ -7,9 +7,9 @@ using System.Collections;
 public class GameLogic : MonoBehaviour
 {
 	public GameObject GameUI;
-	//List<Box> boxes = new List<Box>();
+	public string nextLevel;
 	int currentBoxIndex;
-	Box currentBox;
+	bool ended;
 
 	void Awake()
 	{
@@ -19,92 +19,40 @@ public class GameLogic : MonoBehaviour
 			return;
 		}
 
-		//DontDestroyOnLoad(this);
-		Debug.Log("Starting gamelogic!");
 		Music.Play(MusicTrackKind.InGame);
 		The.gameLogic = this;
 		Instantiate(GameUI);
-		AddAllBoxes();
-		
-		//ShowNextBox();
 	}
 
-	static void OnBoxLoaded(Box box)
+	void Update()
 	{
-		//box.gameObject.SetActive(false);
+		if (Input.GetKey(KeyCode.M) && Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
+		{
+			OnBoxUnlocked();
+		}
 	}
 
 	public void OnBoxUnlocked()
 	{
-		currentBoxIndex++;
-		Debug.Log("Current index = " + currentBoxIndex);
-
-		if (The.box != null)
+		if (ended)
 		{
-			//The.box.gameObject.SetActive(false); // TODO: fade animation
-			TweenScale tweenScale = TweenScale.Begin(The.box.gameObject, 0.5f, Vector3.one * 0.001f);
-			EventDelegate.Set(tweenScale.onFinished, () => { 
-				UITweener.current.gameObject.SetActive(false);
-			});
-			The.box = null;
+			return;
 		}
-		if (currentBoxIndex >= 2)
+		ended = true;
+		//if (The.box != null)
+		//{
+		//    TweenScale tweenScale = TweenScale.Begin(The.box.gameObject, 0.5f, Vector3.one * 0.001f);
+		//    EventDelegate.Set(tweenScale.onFinished, () => UITweener.current.gameObject.SetActive(false));
+		//    The.box = null;
+		//}
+
+		if (nextLevel != "")
 		{
-			currentBoxIndex = 0;
-			LoadNextScene();
-			//Win();
+			PreloadScreen.Load(nextLevel);
 		}
 		else
 		{
-			LoadNextScene();
+			PreloadScreen.Load("FinalScreen");
 		}
-	}
-
-	void LoadNextScene()
-	{
-		int levelIndex = currentBoxIndex + 1;
-		PreloadScreen.Load(levelIndex,null,true);
-
-
-		//StartCoroutine(LoadNextSceneC());
-	}
-
-	IEnumerator LoadNextSceneC()
-	{
-		Camera main = Camera.main;
-		int levelIndex = currentBoxIndex + 1;
-		if (!Application.CanStreamedLevelBeLoaded(levelIndex))
-		{
-			Debug.Log("No more scenes");
-			yield break;
-		}
-
-		var async = Application.LoadLevelAdditiveAsync(levelIndex);
-		async.allowSceneActivation = false;
-
-		while (async.progress < 0.9f)
-		{
-			yield return null;
-		}
-		async.allowSceneActivation = true;
-		yield return async;
-
-		foreach (Camera c in FindObjectsOfType<Camera>())
-		{
-			if (main != c)
-			{
-				Debug.Log("Destry " + c);
-				Destroy(c.gameObject);
-			}
-		}
-		Destroy(currentBox);
-		yield return null;
-		AddAllBoxes();
-		Debug.Log("Loaded scene " + levelIndex);
-	}
-
-	void AddAllBoxes()
-	{
-		currentBox = FindObjectOfType<Box>();
 	}
 }

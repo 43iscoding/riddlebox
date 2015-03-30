@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameUI: {fileID: 176324, guid: a5e3c6d5cd783f045a051e91eb4f8cb1, type: 2}
+  nextLevel: Level2
 --- !u!4 &1768576801
 Transform:
   m_ObjectHideFlags: 0

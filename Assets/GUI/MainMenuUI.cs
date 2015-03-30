@@ -22,7 +22,6 @@ public class MainMenuUI : MonoBehaviour {
 		Music.musics = musics;
 
 		Music.Play(MusicTrackKind.MainMenu);
-
 	}
 
 
@@ -47,5 +46,10 @@ public class MainMenuUI : MonoBehaviour {
 	public void Higscores()
 	{
 		PreloadScreen.Load("Level1", null);
+	}
+
+	public void Quit()
+	{
+		Application.Quit();
 	}
 }

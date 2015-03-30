@@ -19,7 +19,7 @@ public class WheelSide : Side
 			false,// 5
 			true, //6
 			false, //7
-			};
+		};
 
 
 	void Start()
