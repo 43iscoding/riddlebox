@@ -9,7 +9,11 @@ public class MainMenuUI : MonoBehaviour {
 	public List<MusicConfig> MusicTracks;
 
 		
-	void Awake(){
+	void Awake()
+	{
+#if UNITY_ANDROID || UNITY_IOS || UNITY_WP8
+		Cursor.visible = false;
+#endif
 
 		PreloadScreen.prefab = PreloadScreenPrefab;
 
