@@ -146,8 +146,23 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Andrejs Jurcenoks\nAndrey Birzgals\nAndrey Pelipenko\nAlexeksejs Voloviks\nDmitrijs
-    Voloviks\nJevgenijs Boiko\nJekater\u012Bna Sali\u0146a\nLev Bass\nVsevolods Golovins"
+  m_Text: 'Andrejs Jurcenoks
+
+    Andrey Birzgals
+
+    Andrey Pelipenko
+
+    Alexeksejs Voloviks
+
+    Dmitrijs Voloviks
+
+    Jevgenijs Boiko
+
+    Jekaterina Salina
+
+    Lev Bass
+
+    Vsevolods Golovins'
 --- !u!222 &81884941
 CanvasRenderer:
   m_ObjectHideFlags: 0
