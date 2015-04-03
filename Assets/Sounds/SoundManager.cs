@@ -18,6 +18,7 @@ public class SoundManager : MonoBehaviour
 	public AudioClip Vikruchivaetsa_mehanizm;
 	public AudioClip vkljuchaetsa_lampochka;
 	public AudioClip lampochka_var2;
+	public AudioClip done;
 
 	void Awake()
 	{

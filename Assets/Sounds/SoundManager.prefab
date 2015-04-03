@@ -54,6 +54,7 @@ MonoBehaviour:
   vkljuchaetsa_lampochka: {fileID: 8300000, guid: 4f695d2ba6e80f7428f367e408e2a29f,
     type: 3}
   lampochka_var2: {fileID: 8300000, guid: 8af77b0b2f109e44d9470540d68fa87a, type: 3}
+  done: {fileID: 8300000, guid: fffd209f0bfea0144ab2426206e77b15, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

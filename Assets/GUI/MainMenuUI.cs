@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 
-public class MainMenuUI : MonoBehaviour {
+public class MainMenuUI : MonoBehaviour
+{
 	public PreloadScreen PreloadScreenPrefab;
 	internal static Dictionary<MusicTrackKind, MusicConfig> musics = new Dictionary<MusicTrackKind, MusicConfig>();
 
@@ -12,9 +13,12 @@ public class MainMenuUI : MonoBehaviour {
 		
 	void Awake()
 	{
-#if UNITY_ANDROID || UNITY_IOS || UNITY_WP8
-		Cursor.visible = false;
-#endif
+		if (Application.platform == RuntimePlatform.Android ||
+		    Application.platform == RuntimePlatform.IPhonePlayer ||
+		    Application.platform == RuntimePlatform.WP8Player)
+		{
+			Cursor.visible = false;
+		}
 
 		PreloadScreen.prefab = PreloadScreenPrefab;
 

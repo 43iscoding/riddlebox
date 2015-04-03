@@ -23,6 +23,8 @@ public class Box : MonoBehaviour
 
 	public void OnSideUnlocked(Side side)
 	{
+		SoundUtils.PlaySound(SoundManager.instance.done);
+
 		unlocked.Add(side);
 		bool all = true;
 		foreach (var s in sides)
