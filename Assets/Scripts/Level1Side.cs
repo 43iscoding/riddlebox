@@ -11,6 +11,7 @@ public class Level1Side : Side
 	public GameObject lockDown;
 
 	public List<Handle> doors;
+	public List<Animation> doorsAnimation;
 	public List<Handle> topHandles;
 	public Material green;
 
@@ -32,32 +33,38 @@ public class Level1Side : Side
 			yield return null;
 		}
 		//// DOORS
+		SoundUtils.PlaySound(SoundManager.instance.done);
 		Debug.Log("Open doors");
+
+		doorsAnimation[0].Play();
+		doorsAnimation[1].Play();
+
+		yield return new WaitForSeconds(2);
 
 		//{
 		//	var joint = doors[0].gameObject.AddComponent<HingeJoint>();
 		//	joint.connectedBody
 		//}
 
-		foreach (var door in doors)
-		{
-			door.gameObject.AddComponent<MeshCollider>().convex = true;
-			door.gameObject.AddComponent<RotateWidget>().onStart = SoundManager.instance.krutilki;
-			door.gameObject.GetComponent<Rigidbody>().isKinematic = false;
-		}
+		//foreach (var door in doors)
+		//{
+		//    door.gameObject.AddComponent<MeshCollider>().convex = true;
+		//    door.gameObject.AddComponent<RotateWidget>().onStart = SoundManager.instance.krutilki;
+		//    door.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+		//}
 
-		while (!doors[0].IsOk() || !doors[1].IsOk())
-		{
-			if (doors[0].IsOk())
-			{
-				doors[0].LockRotation();
-			}
-			if (doors[1].IsOk())
-			{
-				doors[1].LockRotation();
-			}
-			yield return null;
-		}
+		//while (!doors[0].IsOk() || !doors[1].IsOk())
+		//{
+		//    if (doors[0].IsOk())
+		//    {
+		//        doors[0].LockRotation();
+		//    }
+		//    if (doors[1].IsOk())
+		//    {
+		//        doors[1].LockRotation();
+		//    }
+		//    yield return null;
+		//}
 		Debug.Log("Level completed");
 		OnUnlock();
 	}
@@ -96,8 +103,8 @@ public class Level1Side : Side
 			h.GetComponent<MeshRenderer>().materials[1].SetTexture(0, green.mainTexture);
 		}
 		Debug.Log("Top Handles Unlocked");
-		doors[0].GetComponent<MouseDownProxy>().enabled = false;
-		doors[1].GetComponent<MouseDownProxy>().enabled = false;
+		//doors[0].GetComponent<MouseDownProxy>().enabled = false;
+		//doors[1].GetComponent<MouseDownProxy>().enabled = false;
 		topHandlesReady = true;
 	}
 
@@ -134,6 +141,7 @@ public class Level1Side : Side
 			h.LockRotation();
 		}
 		Debug.Log("Rotate bottom");
+		SoundUtils.PlaySound(SoundManager.instance.done);
 
 		// Rotate bottom
 		bottom.GetComponent<RotateWidget>().enabled = true;
@@ -158,6 +166,7 @@ public class Level1Side : Side
 		}
 
 		Debug.Log("Viezhaet ruchka");
+		SoundUtils.PlaySound(SoundManager.instance.done);
 		SoundUtils.PlaySound(SoundManager.instance.unlocking_2);
 
 		{

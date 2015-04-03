@@ -55,7 +55,9 @@ public class rotateSwitch : MonoBehaviour
 	
 	void OnMouseDown()
 	{
-		if (locks == 0 && SwitchSide.instance.box.IsUnlocked(SwitchSide.instance.box.sides[0]))
+		if (locks == 0 && 
+			SwitchSide.instance.box.IsUnlocked(SwitchSide.instance.box.sides[0]) &&
+			SwitchSide.instance.box.IsUnlocked(SwitchSide.instance.box.sides[2]))
 		{
 			SoundUtils.PlaySound(SoundManager.instance.unlocking);
 			TurnSwitch();
