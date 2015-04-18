@@ -370,6 +370,7 @@ Transform:
   m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children:
   - {fileID: 1733042825}
+  - {fileID: 726711809}
   m_Father: {fileID: 1556058382}
   m_RootOrder: 3
 --- !u!114 &216979144
@@ -1846,7 +1847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 216979143}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!108 &726711810
 Light:
   m_ObjectHideFlags: 0
@@ -2299,6 +2300,38 @@ Prefab:
     - target: {fileID: 8156080, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422544, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445734, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488518, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 12498208, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 140646, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105834, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183174, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515734, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5282a5929b998b04a84ea33d91fd9c07, type: 2}

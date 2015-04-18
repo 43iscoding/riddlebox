@@ -97,6 +97,7 @@ GameObject:
   - 224: {fileID: 81884939}
   - 222: {fileID: 81884941}
   - 114: {fileID: 81884940}
+  - 114: {fileID: 81884942}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -133,9 +134,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: .603921592, b: .301960796, a: .87843138}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e351cc669c8a0e4793bea5c89d29226, type: 3}
+    m_Font: {fileID: 12800000, guid: dbc6d9f7406ec1b49b3c6dd3fd899f20, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -169,6 +170,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 81884938}
+--- !u!114 &81884942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81884938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &927770866
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +535,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11425350, guid: 0a3593ffeef217e4bb7a0e25a8cb1912, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415532, guid: 0a3593ffeef217e4bb7a0e25a8cb1912, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a3593ffeef217e4bb7a0e25a8cb1912, type: 2}
   m_IsPrefabParent: 0
@@ -738,6 +761,7 @@ GameObject:
   - 224: {fileID: 1861065713}
   - 222: {fileID: 1861065715}
   - 114: {fileID: 1861065714}
+  - 114: {fileID: 1861065716}
   m_Layer: 5
   m_Name: Credits 1
   m_TagString: Untagged
@@ -774,9 +798,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .945098102, g: .572549045, b: .290196091, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e351cc669c8a0e4793bea5c89d29226, type: 3}
+    m_Font: {fileID: 12800000, guid: 46fde5db4c8397841a560cc055c25452, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -794,6 +818,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1861065712}
+--- !u!114 &1861065716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1861065712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1944999002
 GameObject:
   m_ObjectHideFlags: 0
